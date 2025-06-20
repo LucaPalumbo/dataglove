@@ -1,0 +1,6 @@
+{
+  "package_name": "dataglove_msgs",
+  "non_idl_tuples": [
+    "/home/feld/ros2_ws/src/dataglove_msgs:msg/VMG30Data.msg"
+  ]
+}

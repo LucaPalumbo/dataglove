@@ -1,0 +1,147 @@
+[0.014s] Invoking command in '/home/feld/ros2_ws/build/dataglove_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/feld/ros2_ws/build/dataglove_msgs -- -j8 -l8
+[0.085s] [  2%] Built target dataglove_msgs__rosidl_generator_type_description
+[0.098s] [  2%] Built target ament_cmake_python_copy_dataglove_msgs
+[0.116s] [  8%] Built target dataglove_msgs__cpp
+[0.117s] [ 20%] Built target dataglove_msgs__rosidl_generator_c
+[0.156s] [ 29%] Built target dataglove_msgs__rosidl_typesupport_cpp
+[0.161s] [ 38%] Built target dataglove_msgs__rosidl_typesupport_introspection_c
+[0.162s] [ 47%] Built target dataglove_msgs__rosidl_typesupport_fastrtps_cpp
+[0.163s] [ 55%] Built target dataglove_msgs__rosidl_typesupport_c
+[0.163s] [ 64%] Built target dataglove_msgs__rosidl_typesupport_fastrtps_c
+[0.164s] [ 73%] Built target dataglove_msgs__rosidl_typesupport_introspection_cpp
+[0.194s] [ 73%] Built target dataglove_msgs
+[0.226s] [ 76%] Built target dataglove_msgs__py
+[0.258s] [ 82%] Built target dataglove_msgs__rosidl_generator_py
+[0.289s] [100%] Built target dataglove_msgs_s__rosidl_typesupport_introspection_c
+[0.289s] [100%] Built target dataglove_msgs_s__rosidl_typesupport_c
+[0.289s] [100%] Built target dataglove_msgs_s__rosidl_typesupport_fastrtps_c
+[0.484s] running egg_info
+[0.517s] writing dataglove_msgs.egg-info/PKG-INFO
+[0.517s] writing dependency_links to dataglove_msgs.egg-info/dependency_links.txt
+[0.518s] writing top-level names to dataglove_msgs.egg-info/top_level.txt
+[0.617s] reading manifest file 'dataglove_msgs.egg-info/SOURCES.txt'
+[0.617s] writing manifest file 'dataglove_msgs.egg-info/SOURCES.txt'
+[0.655s] [100%] Built target ament_cmake_python_build_dataglove_msgs_egg
+[0.672s] Invoked command in '/home/feld/ros2_ws/build/dataglove_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/feld/ros2_ws/build/dataglove_msgs -- -j8 -l8
+[0.686s] Invoking command in '/home/feld/ros2_ws/build/dataglove_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/feld/ros2_ws/build/dataglove_msgs
+[0.698s] -- Install configuration: ""
+[0.698s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/ament_index/resource_index/rosidl_interfaces/dataglove_msgs
+[0.699s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/msg/VMG30Data.json
+[0.699s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs
+[0.699s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg
+[0.699s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/vmg30_data.h
+[0.699s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.699s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail
+[0.699s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__struct.h
+[0.700s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__description.c
+[0.700s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.c
+[0.700s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__functions.c
+[0.700s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__functions.h
+[0.701s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.h
+[0.701s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/library_path.sh
+[0.701s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/library_path.dsv
+[0.701s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_generator_c.so
+[0.701s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs
+[0.701s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg
+[0.701s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.702s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail
+[0.702s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__rosidl_typesupport_fastrtps_c.h
+[0.702s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_fastrtps_c.so
+[0.702s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs
+[0.702s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg
+[0.702s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.702s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail
+[0.703s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__rosidl_typesupport_introspection_c.h
+[0.703s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.c
+[0.703s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_introspection_c.so
+[0.703s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_c.so
+[0.703s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs
+[0.703s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg
+[0.703s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/vmg30_data.hpp
+[0.703s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.704s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail
+[0.704s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__traits.hpp
+[0.704s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.hpp
+[0.704s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__builder.hpp
+[0.704s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__struct.hpp
+[0.704s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs
+[0.704s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg
+[0.705s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.705s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail
+[0.705s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__rosidl_typesupport_fastrtps_cpp.hpp
+[0.705s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/dds_fastrtps
+[0.705s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.705s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs
+[0.705s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg
+[0.705s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail
+[0.705s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__rosidl_typesupport_introspection_cpp.hpp
+[0.706s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.cpp
+[0.706s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_introspection_cpp.so
+[0.706s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_cpp.so
+[0.706s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/pythonpath.sh
+[0.706s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/pythonpath.dsv
+[0.706s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info
+[0.707s] -- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+[0.707s] -- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info/PKG-INFO
+[0.707s] -- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info/top_level.txt
+[0.707s] -- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+[0.707s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs
+[0.707s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_c.so
+[0.707s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/_dataglove_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.708s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/_dataglove_msgs_s.ep.rosidl_typesupport_c.c
+[0.708s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/__init__.py
+[0.708s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_introspection_c.so
+[0.708s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg
+[0.708s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg/_vmg30_data_s.c
+[0.708s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg/_vmg30_data.py
+[0.708s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg/__init__.py
+[0.709s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_fastrtps_c.so
+[0.709s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/_dataglove_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[0.765s] Listing '/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs'...
+[0.765s] Listing '/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg'...
+[0.773s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_fastrtps_c.so
+[0.773s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_introspection_c.so
+[0.773s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_c.so
+[0.774s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_generator_py.so
+[0.774s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/msg/VMG30Data.idl
+[0.774s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/msg/VMG30Data.msg
+[0.774s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/ament_index/resource_index/package_run_dependencies/dataglove_msgs
+[0.774s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/ament_index/resource_index/parent_prefix_path/dataglove_msgs
+[0.774s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/ament_prefix_path.sh
+[0.775s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/ament_prefix_path.dsv
+[0.775s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/path.sh
+[0.775s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/path.dsv
+[0.775s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/local_setup.bash
+[0.775s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/local_setup.sh
+[0.775s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/local_setup.zsh
+[0.775s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/local_setup.dsv
+[0.776s] -- Installing: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/package.dsv
+[0.776s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/ament_index/resource_index/packages/dataglove_msgs
+[0.776s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_cExport.cmake
+[0.776s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.776s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[0.776s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.777s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.777s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.777s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_cExport.cmake
+[0.777s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.777s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_cppExport.cmake
+[0.777s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.777s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.778s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.778s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.778s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_cppExport.cmake
+[0.778s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.778s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_pyExport.cmake
+[0.778s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_pyExport-noconfig.cmake
+[0.778s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/rosidl_cmake-extras.cmake
+[0.778s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.778s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.779s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.779s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.779s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.779s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.779s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgsConfig.cmake
+[0.779s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgsConfig-version.cmake
+[0.779s] -- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/package.xml
+[0.780s] Invoked command in '/home/feld/ros2_ws/build/dataglove_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/feld/ros2_ws/build/dataglove_msgs

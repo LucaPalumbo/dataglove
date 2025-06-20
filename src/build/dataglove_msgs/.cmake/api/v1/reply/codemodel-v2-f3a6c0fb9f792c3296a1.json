@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-fa6c15a10940a68f2a06.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "dataglove_msgs__py",
+					"jsonFile" : "directory-dataglove_msgs__py-058dff404dc2262f923f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/feld/ros2_ws/src/build/dataglove_msgs/dataglove_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "dataglove_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_dataglove_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_dataglove_msgs_egg-645e8a3437332eaf516c.json",
+					"name" : "ament_cmake_python_build_dataglove_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_dataglove_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_dataglove_msgs-48ceb9046c1f55313710.json",
+					"name" : "ament_cmake_python_copy_dataglove_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs-5727b076bb7a6dba5e94.json",
+					"name" : "dataglove_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__cpp-fe04eed319fb6bfbfef0.json",
+					"name" : "dataglove_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "dataglove_msgs__py::@f54f4a85b9698153e3d6",
+					"jsonFile" : "target-dataglove_msgs__py-a6700fae67c738141503.json",
+					"name" : "dataglove_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__rosidl_generator_c-68c122b70a0b0d1dfad3.json",
+					"name" : "dataglove_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__rosidl_generator_py-8086709d70eedacedeec.json",
+					"name" : "dataglove_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__rosidl_generator_type_description-19f52406c6dbb585cfc6.json",
+					"name" : "dataglove_msgs__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__rosidl_typesupport_c-f53a8927cbce6e838ae2.json",
+					"name" : "dataglove_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__rosidl_typesupport_cpp-19806b101b3170449026.json",
+					"name" : "dataglove_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__rosidl_typesupport_fastrtps_c-0f2a338036be3867e0c9.json",
+					"name" : "dataglove_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__rosidl_typesupport_fastrtps_cpp-e304aaa4aac86c37721f.json",
+					"name" : "dataglove_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__rosidl_typesupport_introspection_c-10fa6ddff28a63069408.json",
+					"name" : "dataglove_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs__rosidl_typesupport_introspection_cpp-d66ad61e3663bafb4c84.json",
+					"name" : "dataglove_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs_s__rosidl_typesupport_c-2db6c5b45d42313d83f2.json",
+					"name" : "dataglove_msgs_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs_s__rosidl_typesupport_fastrtps_c-c433afa52011b190bc19.json",
+					"name" : "dataglove_msgs_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs_s__rosidl_typesupport_introspection_c-ae2cc810340ae76effad.json",
+					"name" : "dataglove_msgs_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dataglove_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dataglove_msgs_uninstall-b915ef20e5820b2adc7b.json",
+					"name" : "dataglove_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-622470fa0066f6170c51.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/feld/ros2_ws/src/build/dataglove_msgs",
+		"source" : "/home/feld/ros2_ws/src/dataglove_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

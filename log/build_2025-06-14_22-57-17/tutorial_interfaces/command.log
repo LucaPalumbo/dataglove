@@ -1,0 +1,2 @@
+Invoking command in '/home/feld/ros2_ws/build/tutorial_interfaces': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/feld/ros2_ws/build/tutorial_interfaces -- -j8 -l8
+Invoked command in '/home/feld/ros2_ws/build/tutorial_interfaces' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/feld/ros2_ws/build/tutorial_interfaces -- -j8 -l8

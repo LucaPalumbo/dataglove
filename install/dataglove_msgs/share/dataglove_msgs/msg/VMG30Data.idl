@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dataglove_msgs/msg/VMG30Data.msg
+// generated code does not contain a copyright notice
+
+
+module dataglove_msgs {
+  module msg {
+    struct VMG30Data {
+      @verbatim (language="comment", text=
+        "1 value")
+      int32 packet_tick;
+
+      @verbatim (language="comment", text=
+        "1 value")
+      float time;
+
+      @verbatim (language="comment", text=
+        "16 values")
+      sequence<float> sensors;
+
+      @verbatim (language="comment", text=
+        "3 values (roll, pitch, yaw)")
+      sequence<float> rpy_hand;
+
+      @verbatim (language="comment", text=
+        "4 values (w, x, y, z)")
+      sequence<float> quat_hand;
+
+      @verbatim (language="comment", text=
+        "3 values")
+      sequence<float> rpy_forearm;
+
+      @verbatim (language="comment", text=
+        "4 values")
+      sequence<float> quat_forearm;
+    };
+  };
+};

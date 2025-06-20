@@ -1,0 +1,44 @@
+[1.483s] Invoking command in '/home/feld/ros2_ws/src/dataglove': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/feld/ros2_ws/build/dataglove/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dataglove build --build-base /home/feld/ros2_ws/build/dataglove/build install --record /home/feld/ros2_ws/build/dataglove/install.log --single-version-externally-managed install_data
+[1.956s] running egg_info
+[1.956s] creating ../../build/dataglove/dataglove.egg-info
+[1.988s] writing ../../build/dataglove/dataglove.egg-info/PKG-INFO
+[1.988s] writing dependency_links to ../../build/dataglove/dataglove.egg-info/dependency_links.txt
+[1.989s] writing entry points to ../../build/dataglove/dataglove.egg-info/entry_points.txt
+[1.989s] writing requirements to ../../build/dataglove/dataglove.egg-info/requires.txt
+[1.989s] writing top-level names to ../../build/dataglove/dataglove.egg-info/top_level.txt
+[1.989s] writing manifest file '../../build/dataglove/dataglove.egg-info/SOURCES.txt'
+[2.056s] reading manifest file '../../build/dataglove/dataglove.egg-info/SOURCES.txt'
+[2.056s] adding license file 'LICENSE'
+[2.057s] writing manifest file '../../build/dataglove/dataglove.egg-info/SOURCES.txt'
+[2.057s] running build
+[2.057s] running build_py
+[2.057s] creating /home/feld/ros2_ws/build/dataglove/build
+[2.058s] creating /home/feld/ros2_ws/build/dataglove/build/lib
+[2.058s] creating /home/feld/ros2_ws/build/dataglove/build/lib/dataglove
+[2.058s] copying dataglove/glove_reader.py -> /home/feld/ros2_ws/build/dataglove/build/lib/dataglove
+[2.058s] copying dataglove/__init__.py -> /home/feld/ros2_ws/build/dataglove/build/lib/dataglove
+[2.058s] copying dataglove/test.py -> /home/feld/ros2_ws/build/dataglove/build/lib/dataglove
+[2.058s] copying dataglove/vmg30.py -> /home/feld/ros2_ws/build/dataglove/build/lib/dataglove
+[2.058s] running install
+[2.068s] running install_lib
+[2.101s] creating /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove
+[2.101s] copying /home/feld/ros2_ws/build/dataglove/build/lib/dataglove/glove_reader.py -> /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove
+[2.102s] copying /home/feld/ros2_ws/build/dataglove/build/lib/dataglove/__init__.py -> /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove
+[2.102s] copying /home/feld/ros2_ws/build/dataglove/build/lib/dataglove/test.py -> /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove
+[2.102s] copying /home/feld/ros2_ws/build/dataglove/build/lib/dataglove/vmg30.py -> /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove
+[2.102s] byte-compiling /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove/glove_reader.py to glove_reader.cpython-312.pyc
+[2.103s] byte-compiling /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove/__init__.py to __init__.cpython-312.pyc
+[2.103s] byte-compiling /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove/test.py to test.cpython-312.pyc
+[2.104s] byte-compiling /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove/vmg30.py to vmg30.cpython-312.pyc
+[2.108s] running install_data
+[2.108s] creating /home/feld/ros2_ws/install/dataglove/share/ament_index
+[2.108s] creating /home/feld/ros2_ws/install/dataglove/share/ament_index/resource_index
+[2.108s] creating /home/feld/ros2_ws/install/dataglove/share/ament_index/resource_index/packages
+[2.109s] copying resource/dataglove -> /home/feld/ros2_ws/install/dataglove/share/ament_index/resource_index/packages
+[2.109s] copying package.xml -> /home/feld/ros2_ws/install/dataglove/share/dataglove
+[2.109s] running install_egg_info
+[2.144s] Copying ../../build/dataglove/dataglove.egg-info to /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove-0.0.0-py3.12.egg-info
+[2.145s] running install_scripts
+[2.361s] Installing glove_reader script to /home/feld/ros2_ws/install/dataglove/lib/dataglove
+[2.361s] writing list of installed files to '/home/feld/ros2_ws/build/dataglove/install.log'
+[2.405s] Invoked command in '/home/feld/ros2_ws/src/dataglove' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/feld/ros2_ws/build/dataglove/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dataglove build --build-base /home/feld/ros2_ws/build/dataglove/build install --record /home/feld/ros2_ws/build/dataglove/install.log --single-version-externally-managed install_data

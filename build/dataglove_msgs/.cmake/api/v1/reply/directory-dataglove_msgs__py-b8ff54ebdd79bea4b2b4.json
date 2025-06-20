@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "dataglove_msgs__py",
+		"source" : "/home/feld/ros2_ws/build/dataglove_msgs/dataglove_msgs__py"
+	}
+}

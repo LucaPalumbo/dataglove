@@ -1,0 +1,25 @@
+[1.550s] Invoking command in '/home/feld/ros2_ws/src/dataglove': CMAKE_PREFIX_PATH=/home/feld/ros2_ws/install/dataglove_msgs:/home/feld/ros2_ws/install/tutorial_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/feld/ros2_ws/install/dataglove_msgs/lib:/home/feld/ros2_ws/install/tutorial_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/feld/ros2_ws/build/dataglove/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages:/home/feld/ros2_ws/install/tutorial_interfaces/lib/python3.12/site-packages:/home/feld/ros2_ws/install/py_pubsub/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dataglove build --build-base /home/feld/ros2_ws/build/dataglove/build install --record /home/feld/ros2_ws/build/dataglove/install.log --single-version-externally-managed install_data
+[2.127s] running egg_info
+[2.171s] writing ../../build/dataglove/dataglove.egg-info/PKG-INFO
+[2.171s] writing dependency_links to ../../build/dataglove/dataglove.egg-info/dependency_links.txt
+[2.171s] writing entry points to ../../build/dataglove/dataglove.egg-info/entry_points.txt
+[2.172s] writing requirements to ../../build/dataglove/dataglove.egg-info/requires.txt
+[2.172s] writing top-level names to ../../build/dataglove/dataglove.egg-info/top_level.txt
+[2.261s] reading manifest file '../../build/dataglove/dataglove.egg-info/SOURCES.txt'
+[2.262s] writing manifest file '../../build/dataglove/dataglove.egg-info/SOURCES.txt'
+[2.262s] running build
+[2.262s] running build_py
+[2.263s] copying dataglove/data_saver.py -> /home/feld/ros2_ws/build/dataglove/build/lib/dataglove
+[2.263s] running install
+[2.273s] running install_lib
+[2.317s] copying /home/feld/ros2_ws/build/dataglove/build/lib/dataglove/data_saver.py -> /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove
+[2.318s] byte-compiling /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove/data_saver.py to data_saver.cpython-312.pyc
+[2.320s] running install_data
+[2.320s] running install_egg_info
+[2.366s] removing '/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove-0.0.0-py3.12.egg-info' (and everything under it)
+[2.367s] Copying ../../build/dataglove/dataglove.egg-info to /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove-0.0.0-py3.12.egg-info
+[2.368s] running install_scripts
+[2.640s] Installing data_saver script to /home/feld/ros2_ws/install/dataglove/lib/dataglove
+[2.640s] Installing glove script to /home/feld/ros2_ws/install/dataglove/lib/dataglove
+[2.641s] writing list of installed files to '/home/feld/ros2_ws/build/dataglove/install.log'
+[2.684s] Invoked command in '/home/feld/ros2_ws/src/dataglove' returned '0': CMAKE_PREFIX_PATH=/home/feld/ros2_ws/install/dataglove_msgs:/home/feld/ros2_ws/install/tutorial_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/feld/ros2_ws/install/dataglove_msgs/lib:/home/feld/ros2_ws/install/tutorial_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/feld/ros2_ws/build/dataglove/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages:/home/feld/ros2_ws/install/tutorial_interfaces/lib/python3.12/site-packages:/home/feld/ros2_ws/install/py_pubsub/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dataglove build --build-base /home/feld/ros2_ws/build/dataglove/build install --record /home/feld/ros2_ws/build/dataglove/install.log --single-version-externally-managed install_data

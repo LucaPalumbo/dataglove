@@ -1,0 +1,5 @@
+[0.000000] (-) TimerEvent: {}
+[0.000326] (-) JobUnselected: {'identifier': 'dataglove'}
+[0.000374] (-) JobUnselected: {'identifier': 'dataglove_msgs'}
+[0.000400] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.000420] (-) EventReactorShutdown: {}

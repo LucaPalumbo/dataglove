@@ -1,0 +1,22 @@
+[1.333s] Invoking command in '/home/feld/ros2_ws/src/dataglove': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/feld/ros2_ws/build/dataglove/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dataglove build --build-base /home/feld/ros2_ws/build/dataglove/build install --record /home/feld/ros2_ws/build/dataglove/install.log --single-version-externally-managed install_data
+[1.751s] running egg_info
+[1.782s] writing ../../build/dataglove/dataglove.egg-info/PKG-INFO
+[1.783s] writing dependency_links to ../../build/dataglove/dataglove.egg-info/dependency_links.txt
+[1.783s] writing entry points to ../../build/dataglove/dataglove.egg-info/entry_points.txt
+[1.783s] writing requirements to ../../build/dataglove/dataglove.egg-info/requires.txt
+[1.783s] writing top-level names to ../../build/dataglove/dataglove.egg-info/top_level.txt
+[1.847s] reading manifest file '../../build/dataglove/dataglove.egg-info/SOURCES.txt'
+[1.847s] adding license file 'LICENSE'
+[1.848s] writing manifest file '../../build/dataglove/dataglove.egg-info/SOURCES.txt'
+[1.848s] running build
+[1.848s] running build_py
+[1.848s] running install
+[1.858s] running install_lib
+[1.891s] running install_data
+[1.891s] running install_egg_info
+[1.926s] removing '/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove-0.0.0-py3.12.egg-info' (and everything under it)
+[1.927s] Copying ../../build/dataglove/dataglove.egg-info to /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove-0.0.0-py3.12.egg-info
+[1.929s] running install_scripts
+[2.135s] Installing glove_reader script to /home/feld/ros2_ws/install/dataglove/lib/dataglove
+[2.135s] writing list of installed files to '/home/feld/ros2_ws/build/dataglove/install.log'
+[2.176s] Invoked command in '/home/feld/ros2_ws/src/dataglove' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/feld/ros2_ws/build/dataglove/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dataglove build --build-base /home/feld/ros2_ws/build/dataglove/build install --record /home/feld/ros2_ws/build/dataglove/install.log --single-version-externally-managed install_data

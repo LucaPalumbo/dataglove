@@ -1,0 +1,359 @@
+[0.000000] (-) TimerEvent: {}
+[0.000420] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.000489] (dataglove_msgs) JobQueued: {'identifier': 'dataglove_msgs', 'dependencies': OrderedDict()}
+[0.000531] (dataglove) JobQueued: {'identifier': 'dataglove', 'dependencies': OrderedDict({'dataglove_msgs': '/home/feld/ros2_ws/install/dataglove_msgs'})}
+[0.001448] (dataglove_msgs) JobStarted: {'identifier': 'dataglove_msgs'}
+[0.015105] (dataglove_msgs) JobProgress: {'identifier': 'dataglove_msgs', 'progress': 'cmake'}
+[0.016922] (dataglove_msgs) JobProgress: {'identifier': 'dataglove_msgs', 'progress': 'build'}
+[0.016973] (dataglove_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/feld/ros2_ws/build/dataglove_msgs', '--', '-j8', '-l8'], 'cwd': '/home/feld/ros2_ws/build/dataglove_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'feld', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/feld/ros2_ws/install/tutorial_interfaces/lib:/home/feld/ros2_ws/install/dataglove_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/feld', 'OLDPWD': '/home/feld/ros2_ws/src/dataglove_msgs/msg', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1973', 'SYSTEMD_EXEC_PID': '2421', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3032', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/feld/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'feld', 'JOURNAL_STREAM': '9:18961', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'feld', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/feld-ZenBook:@/tmp/.ICE-unix/2193,unix/feld-ZenBook:/tmp/.ICE-unix/2193', 'INVOCATION_ID': 'b160f51011304228960d2049e97a8f75', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.D6WQ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/feld/ros2_ws/install/tutorial_interfaces:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/home/feld/ros2_ws/install/dataglove_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:a6024fef-6178-415e-870c-ce75316972b4', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/feld/ros2_ws/build/dataglove_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/feld/ros2_ws/install/tutorial_interfaces/lib/python3.12/site-packages:/home/feld/ros2_ws/install/py_pubsub/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/feld/ros2_ws/install/tutorial_interfaces:/home/feld/ros2_ws/install/dataglove_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/opt/ros/jazzy'}), 'shell': False}
+[0.100074] (-) TimerEvent: {}
+[0.117845] (dataglove_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.189710] (dataglove_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.200172] (-) TimerEvent: {}
+[0.300538] (-) TimerEvent: {}
+[0.358452] (dataglove_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[0.400710] (-) TimerEvent: {}
+[0.501069] (-) TimerEvent: {}
+[0.539127] (dataglove_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.544302] (dataglove_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.601201] (-) TimerEvent: {}
+[0.611043] (dataglove_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.687176] (dataglove_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.692831] (dataglove_msgs) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[0.701351] (-) TimerEvent: {}
+[0.801707] (-) TimerEvent: {}
+[0.902035] (-) TimerEvent: {}
+[1.002356] (-) TimerEvent: {}
+[1.097466] (dataglove_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[1.102526] (-) TimerEvent: {}
+[1.203038] (-) TimerEvent: {}
+[1.303538] (-) TimerEvent: {}
+[1.404173] (-) TimerEvent: {}
+[1.504719] (-) TimerEvent: {}
+[1.582576] (dataglove_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.604880] (-) TimerEvent: {}
+[1.705380] (-) TimerEvent: {}
+[1.806043] (-) TimerEvent: {}
+[1.906592] (-) TimerEvent: {}
+[2.007192] (-) TimerEvent: {}
+[2.107757] (-) TimerEvent: {}
+[2.208488] (-) TimerEvent: {}
+[2.249086] (dataglove_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.254046] (dataglove_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[2.308687] (-) TimerEvent: {}
+[2.409298] (-) TimerEvent: {}
+[2.509863] (-) TimerEvent: {}
+[2.610384] (-) TimerEvent: {}
+[2.710660] (-) TimerEvent: {}
+[2.810930] (-) TimerEvent: {}
+[2.861978] (dataglove_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[2.911053] (-) TimerEvent: {}
+[2.971979] (dataglove_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.975919] (dataglove_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.993084] (dataglove_msgs) StdoutLine: {'line': b'-- Configuring done (2.9s)\n'}
+[3.011138] (-) TimerEvent: {}
+[3.068608] (dataglove_msgs) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[3.088146] (dataglove_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/feld/ros2_ws/build/dataglove_msgs\n'}
+[3.111297] (-) TimerEvent: {}
+[3.133558] (dataglove_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[3.148169] (dataglove_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_dataglove_msgs\n'}
+[3.211413] (-) TimerEvent: {}
+[3.311789] (-) TimerEvent: {}
+[3.412070] (-) TimerEvent: {}
+[3.512377] (-) TimerEvent: {}
+[3.526635] (dataglove_msgs) StdoutLine: {'line': b'[  2%] Built target dataglove_msgs__rosidl_generator_type_description\n'}
+[3.540794] (dataglove_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.555432] (dataglove_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.575410] (dataglove_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[3.612516] (-) TimerEvent: {}
+[3.623447] (dataglove_msgs) StdoutLine: {'line': b'writing dataglove_msgs.egg-info/PKG-INFO\n'}
+[3.623773] (dataglove_msgs) StdoutLine: {'line': b'writing dependency_links to dataglove_msgs.egg-info/dependency_links.txt\n'}
+[3.624074] (dataglove_msgs) StdoutLine: {'line': b'writing top-level names to dataglove_msgs.egg-info/top_level.txt\n'}
+[3.712651] (-) TimerEvent: {}
+[3.761053] (dataglove_msgs) StdoutLine: {'line': b"reading manifest file 'dataglove_msgs.egg-info/SOURCES.txt'\n"}
+[3.764146] (dataglove_msgs) StdoutLine: {'line': b"writing manifest file 'dataglove_msgs.egg-info/SOURCES.txt'\n"}
+[3.803089] (dataglove_msgs) StdoutLine: {'line': b'[  8%] Built target ament_cmake_python_build_dataglove_msgs_egg\n'}
+[3.812754] (-) TimerEvent: {}
+[3.913072] (-) TimerEvent: {}
+[4.008261] (dataglove_msgs) StdoutLine: {'line': b'[  8%] Built target dataglove_msgs__cpp\n'}
+[4.013204] (-) TimerEvent: {}
+[4.057805] (dataglove_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/dataglove_msgs__rosidl_generator_c.dir/rosidl_generator_c/dataglove_msgs/msg/detail/vmg30_data__functions.c.o\x1b[0m\n'}
+[4.058112] (dataglove_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/dataglove_msgs__rosidl_generator_c.dir/rosidl_generator_c/dataglove_msgs/msg/detail/vmg30_data__type_support.c.o\x1b[0m\n'}
+[4.058271] (dataglove_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/dataglove_msgs__rosidl_generator_c.dir/rosidl_generator_c/dataglove_msgs/msg/detail/vmg30_data__description.c.o\x1b[0m\n'}
+[4.113362] (-) TimerEvent: {}
+[4.203170] (dataglove_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libdataglove_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[4.213508] (-) TimerEvent: {}
+[4.282991] (dataglove_msgs) StdoutLine: {'line': b'[ 20%] Built target dataglove_msgs__rosidl_generator_c\n'}
+[4.318488] (dataglove_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[4.319494] (-) TimerEvent: {}
+[4.320714] (dataglove_msgs) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.322727] (dataglove_msgs) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.325685] (dataglove_msgs) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.326600] (dataglove_msgs) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.327328] (dataglove_msgs) StdoutLine: {'line': b'[ 38%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.422043] (-) TimerEvent: {}
+[4.526406] (-) TimerEvent: {}
+[4.627372] (-) TimerEvent: {}
+[4.727720] (-) TimerEvent: {}
+[4.828359] (-) TimerEvent: {}
+[4.928972] (-) TimerEvent: {}
+[4.943526] (dataglove_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/dataglove_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dataglove_msgs/msg/vmg30_data__type_support.cpp.o\x1b[0m\n'}
+[5.029084] (-) TimerEvent: {}
+[5.119008] (dataglove_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/dataglove_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dataglove_msgs/msg/detail/vmg30_data__type_support.c.o\x1b[0m\n'}
+[5.129180] (-) TimerEvent: {}
+[5.226593] (dataglove_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/dataglove_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dataglove_msgs/msg/detail/vmg30_data__type_support.cpp.o\x1b[0m\n'}
+[5.229288] (-) TimerEvent: {}
+[5.239529] (dataglove_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/dataglove_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/dataglove_msgs/msg/vmg30_data__type_support.cpp.o\x1b[0m\n'}
+[5.245718] (dataglove_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking C shared library libdataglove_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[5.285986] (dataglove_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/dataglove_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dataglove_msgs/msg/detail/vmg30_data__type_support_c.cpp.o\x1b[0m\n'}
+[5.307148] (dataglove_msgs) StdoutLine: {'line': b'[ 55%] Built target dataglove_msgs__rosidl_typesupport_introspection_c\n'}
+[5.332002] (-) TimerEvent: {}
+[5.333620] (dataglove_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/dataglove_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dataglove_msgs/msg/detail/dds_fastrtps/vmg30_data__type_support.cpp.o\x1b[0m\n'}
+[5.369224] (dataglove_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libdataglove_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[5.432865] (-) TimerEvent: {}
+[5.464016] (dataglove_msgs) StdoutLine: {'line': b'[ 61%] Built target dataglove_msgs__rosidl_typesupport_c\n'}
+[5.535970] (-) TimerEvent: {}
+[5.636322] (-) TimerEvent: {}
+[5.736699] (-) TimerEvent: {}
+[5.813933] (dataglove_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libdataglove_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[5.836823] (-) TimerEvent: {}
+[5.871176] (dataglove_msgs) StdoutLine: {'line': b'[ 64%] Built target dataglove_msgs__rosidl_typesupport_cpp\n'}
+[5.936969] (-) TimerEvent: {}
+[5.995991] (dataglove_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libdataglove_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[6.037125] (-) TimerEvent: {}
+[6.131420] (dataglove_msgs) StdoutLine: {'line': b'[ 67%] Built target dataglove_msgs__rosidl_typesupport_introspection_cpp\n'}
+[6.137247] (-) TimerEvent: {}
+[6.237647] (-) TimerEvent: {}
+[6.338034] (-) TimerEvent: {}
+[6.362174] (dataglove_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libdataglove_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[6.420320] (dataglove_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libdataglove_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[6.438155] (-) TimerEvent: {}
+[6.438587] (dataglove_msgs) StdoutLine: {'line': b'[ 73%] Built target dataglove_msgs__rosidl_typesupport_fastrtps_c\n'}
+[6.538279] (-) TimerEvent: {}
+[6.542312] (dataglove_msgs) StdoutLine: {'line': b'[ 73%] Built target dataglove_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[6.582659] (dataglove_msgs) StdoutLine: {'line': b'[ 73%] Built target dataglove_msgs\n'}
+[6.622943] (dataglove_msgs) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[6.638414] (-) TimerEvent: {}
+[6.738757] (-) TimerEvent: {}
+[6.839033] (-) TimerEvent: {}
+[6.939308] (-) TimerEvent: {}
+[7.039594] (-) TimerEvent: {}
+[7.139863] (-) TimerEvent: {}
+[7.240368] (-) TimerEvent: {}
+[7.335927] (dataglove_msgs) StdoutLine: {'line': b'[ 76%] Built target dataglove_msgs__py\n'}
+[7.340501] (-) TimerEvent: {}
+[7.369079] (dataglove_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/dataglove_msgs__rosidl_generator_py.dir/rosidl_generator_py/dataglove_msgs/msg/_vmg30_data_s.c.o\x1b[0m\n'}
+[7.440619] (-) TimerEvent: {}
+[7.540987] (-) TimerEvent: {}
+[7.641336] (-) TimerEvent: {}
+[7.741652] (-) TimerEvent: {}
+[7.770060] (dataglove_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library libdataglove_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[7.834360] (dataglove_msgs) StdoutLine: {'line': b'[ 82%] Built target dataglove_msgs__rosidl_generator_py\n'}
+[7.841813] (-) TimerEvent: {}
+[7.867682] (dataglove_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/dataglove_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/dataglove_msgs/_dataglove_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[7.867947] (dataglove_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/dataglove_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/dataglove_msgs/_dataglove_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[7.868097] (dataglove_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/dataglove_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/dataglove_msgs/_dataglove_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[7.941956] (-) TimerEvent: {}
+[8.038832] (dataglove_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[8.039176] (dataglove_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[8.039377] (dataglove_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[8.042065] (-) TimerEvent: {}
+[8.086735] (dataglove_msgs) StdoutLine: {'line': b'[100%] Built target dataglove_msgs_s__rosidl_typesupport_c\n'}
+[8.091516] (dataglove_msgs) StdoutLine: {'line': b'[100%] Built target dataglove_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[8.091874] (dataglove_msgs) StdoutLine: {'line': b'[100%] Built target dataglove_msgs_s__rosidl_typesupport_introspection_c\n'}
+[8.114320] (dataglove_msgs) CommandEnded: {'returncode': 0}
+[8.115467] (dataglove_msgs) JobProgress: {'identifier': 'dataglove_msgs', 'progress': 'install'}
+[8.130882] (dataglove_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/feld/ros2_ws/build/dataglove_msgs'], 'cwd': '/home/feld/ros2_ws/build/dataglove_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'feld', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/feld/ros2_ws/install/tutorial_interfaces/lib:/home/feld/ros2_ws/install/dataglove_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/feld', 'OLDPWD': '/home/feld/ros2_ws/src/dataglove_msgs/msg', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1973', 'SYSTEMD_EXEC_PID': '2421', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3032', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/feld/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'feld', 'JOURNAL_STREAM': '9:18961', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'feld', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/feld-ZenBook:@/tmp/.ICE-unix/2193,unix/feld-ZenBook:/tmp/.ICE-unix/2193', 'INVOCATION_ID': 'b160f51011304228960d2049e97a8f75', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.D6WQ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/feld/ros2_ws/install/tutorial_interfaces:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/home/feld/ros2_ws/install/dataglove_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:a6024fef-6178-415e-870c-ce75316972b4', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/feld/ros2_ws/build/dataglove_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/feld/ros2_ws/install/tutorial_interfaces/lib/python3.12/site-packages:/home/feld/ros2_ws/install/py_pubsub/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/feld/ros2_ws/install/tutorial_interfaces:/home/feld/ros2_ws/install/dataglove_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/opt/ros/jazzy'}), 'shell': False}
+[8.142198] (-) TimerEvent: {}
+[8.145541] (dataglove_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.145922] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/ament_index/resource_index/rosidl_interfaces/dataglove_msgs\n'}
+[8.146084] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/msg/VMG30Data.json\n'}
+[8.146466] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs\n'}
+[8.146735] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg\n'}
+[8.147003] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/vmg30_data.h\n'}
+[8.147299] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[8.147462] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail\n'}
+[8.147605] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__struct.h\n'}
+[8.147742] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__description.c\n'}
+[8.147943] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.c\n'}
+[8.148134] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__functions.c\n'}
+[8.148335] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__functions.h\n'}
+[8.148466] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.h\n'}
+[8.148604] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/library_path.sh\n'}
+[8.148777] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/library_path.dsv\n'}
+[8.148918] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_generator_c.so\n'}
+[8.149158] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_generator_c.so" to ""\n'}
+[8.149336] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs\n'}
+[8.149546] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg\n'}
+[8.149673] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[8.149795] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail\n'}
+[8.149966] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__rosidl_typesupport_fastrtps_c.h\n'}
+[8.150102] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[8.150251] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[8.150430] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs\n'}
+[8.150582] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg\n'}
+[8.150724] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[8.150963] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail\n'}
+[8.151355] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__rosidl_typesupport_introspection_c.h\n'}
+[8.151545] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.c\n'}
+[8.151749] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_introspection_c.so\n'}
+[8.151990] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[8.152217] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_c.so\n'}
+[8.152587] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_c.so" to ""\n'}
+[8.152811] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs\n'}
+[8.153082] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg\n'}
+[8.153269] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/vmg30_data.hpp\n'}
+[8.153445] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[8.153634] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail\n'}
+[8.153802] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__traits.hpp\n'}
+[8.153977] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.hpp\n'}
+[8.154118] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__builder.hpp\n'}
+[8.154244] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__struct.hpp\n'}
+[8.154436] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs\n'}
+[8.154577] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg\n'}
+[8.154751] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[8.154892] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail\n'}
+[8.155057] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[8.155229] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/dds_fastrtps\n'}
+[8.155368] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[8.155699] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[8.155890] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs\n'}
+[8.156063] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg\n'}
+[8.156235] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail\n'}
+[8.156438] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[8.156638] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/include/dataglove_msgs/dataglove_msgs/msg/detail/vmg30_data__type_support.cpp\n'}
+[8.157148] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[8.157642] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[8.158166] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_cpp.so\n'}
+[8.158810] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[8.159106] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/pythonpath.sh\n'}
+[8.159337] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/pythonpath.dsv\n'}
+[8.159605] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info\n'}
+[8.159813] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[8.160054] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[8.160325] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[8.160640] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[8.160854] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs\n'}
+[8.161089] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_c.so\n'}
+[8.161305] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/_dataglove_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[8.161575] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/_dataglove_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[8.161872] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/__init__.py\n'}
+[8.162103] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[8.162311] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg\n'}
+[8.162515] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg/_vmg30_data_s.c\n'}
+[8.162720] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg/_vmg30_data.py\n'}
+[8.162992] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg/__init__.py\n'}
+[8.163275] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[8.163476] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/_dataglove_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[8.242339] (-) TimerEvent: {}
+[8.312751] (dataglove_msgs) StdoutLine: {'line': b"Listing '/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs'...\n"}
+[8.313491] (dataglove_msgs) StdoutLine: {'line': b"Compiling '/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/__init__.py'...\n"}
+[8.313893] (dataglove_msgs) StdoutLine: {'line': b"Listing '/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg'...\n"}
+[8.314254] (dataglove_msgs) StdoutLine: {'line': b"Compiling '/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg/__init__.py'...\n"}
+[8.314531] (dataglove_msgs) StdoutLine: {'line': b"Compiling '/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/msg/_vmg30_data.py'...\n"}
+[8.340228] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[8.341328] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[8.342143] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[8.342708] (-) TimerEvent: {}
+[8.343230] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[8.344008] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_c.so\n'}
+[8.346084] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages/dataglove_msgs/dataglove_msgs_s__rosidl_typesupport_c.so" to ""\n'}
+[8.347010] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_generator_py.so\n'}
+[8.347945] (dataglove_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/feld/ros2_ws/install/dataglove_msgs/lib/libdataglove_msgs__rosidl_generator_py.so" to ""\n'}
+[8.348716] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/msg/VMG30Data.idl\n'}
+[8.349290] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/msg/VMG30Data.msg\n'}
+[8.349660] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/ament_index/resource_index/package_run_dependencies/dataglove_msgs\n'}
+[8.350097] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/ament_index/resource_index/parent_prefix_path/dataglove_msgs\n'}
+[8.350536] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/ament_prefix_path.sh\n'}
+[8.350837] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/ament_prefix_path.dsv\n'}
+[8.351321] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/path.sh\n'}
+[8.351666] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/environment/path.dsv\n'}
+[8.351970] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/local_setup.bash\n'}
+[8.352277] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/local_setup.sh\n'}
+[8.352681] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/local_setup.zsh\n'}
+[8.353051] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/local_setup.dsv\n'}
+[8.353485] (dataglove_msgs) StdoutLine: {'line': b'-- Installing: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/package.dsv\n'}
+[8.353779] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/ament_index/resource_index/packages/dataglove_msgs\n'}
+[8.354232] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_cExport.cmake\n'}
+[8.354626] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[8.354937] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[8.355384] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[8.355691] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[8.356033] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[8.356477] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_cExport.cmake\n'}
+[8.356786] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[8.357233] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_cppExport.cmake\n'}
+[8.357518] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[8.357959] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[8.358410] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[8.358725] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[8.359204] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[8.359644] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[8.359962] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_pyExport.cmake\n'}
+[8.360349] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/export_dataglove_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[8.360616] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[8.360841] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[8.360984] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[8.361109] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[8.361227] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[8.361355] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[8.361471] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[8.361586] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgsConfig.cmake\n'}
+[8.361703] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/cmake/dataglove_msgsConfig-version.cmake\n'}
+[8.361819] (dataglove_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/feld/ros2_ws/install/dataglove_msgs/share/dataglove_msgs/package.xml\n'}
+[8.364064] (dataglove_msgs) CommandEnded: {'returncode': 0}
+[8.396432] (dataglove_msgs) JobEnded: {'identifier': 'dataglove_msgs', 'rc': 0}
+[8.397514] (dataglove) JobStarted: {'identifier': 'dataglove'}
+[8.442849] (-) TimerEvent: {}
+[8.543436] (-) TimerEvent: {}
+[8.643738] (-) TimerEvent: {}
+[8.743998] (-) TimerEvent: {}
+[8.844339] (-) TimerEvent: {}
+[8.944637] (-) TimerEvent: {}
+[9.044943] (-) TimerEvent: {}
+[9.145228] (-) TimerEvent: {}
+[9.245520] (-) TimerEvent: {}
+[9.345797] (-) TimerEvent: {}
+[9.446082] (-) TimerEvent: {}
+[9.546391] (-) TimerEvent: {}
+[9.646686] (-) TimerEvent: {}
+[9.746944] (-) TimerEvent: {}
+[9.847242] (-) TimerEvent: {}
+[9.947557] (-) TimerEvent: {}
+[9.952506] (dataglove) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/dataglove', 'build', '--build-base', '/home/feld/ros2_ws/build/dataglove/build', 'install', '--record', '/home/feld/ros2_ws/build/dataglove/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/feld/ros2_ws/src/dataglove', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'feld', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/feld/ros2_ws/install/dataglove_msgs/lib:/home/feld/ros2_ws/install/tutorial_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/feld', 'OLDPWD': '/home/feld/ros2_ws/src/dataglove_msgs/msg', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1973', 'SYSTEMD_EXEC_PID': '2421', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3032', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/feld/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'feld', 'JOURNAL_STREAM': '9:18961', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'feld', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/feld-ZenBook:@/tmp/.ICE-unix/2193,unix/feld-ZenBook:/tmp/.ICE-unix/2193', 'INVOCATION_ID': 'b160f51011304228960d2049e97a8f75', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.D6WQ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/feld/ros2_ws/install/tutorial_interfaces:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/home/feld/ros2_ws/install/dataglove_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:a6024fef-6178-415e-870c-ce75316972b4', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/feld/ros2_ws/build/dataglove', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/feld/ros2_ws/build/dataglove/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove_msgs/lib/python3.12/site-packages:/home/feld/ros2_ws/install/tutorial_interfaces/lib/python3.12/site-packages:/home/feld/ros2_ws/install/py_pubsub/lib/python3.12/site-packages:/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/feld/ros2_ws/install/dataglove_msgs:/home/feld/ros2_ws/install/tutorial_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[10.047693] (-) TimerEvent: {}
+[10.148102] (-) TimerEvent: {}
+[10.248397] (-) TimerEvent: {}
+[10.348695] (-) TimerEvent: {}
+[10.449030] (-) TimerEvent: {}
+[10.457959] (dataglove) StdoutLine: {'line': b'running egg_info\n'}
+[10.498017] (dataglove) StdoutLine: {'line': b'writing ../../build/dataglove/dataglove.egg-info/PKG-INFO\n'}
+[10.498323] (dataglove) StdoutLine: {'line': b'writing dependency_links to ../../build/dataglove/dataglove.egg-info/dependency_links.txt\n'}
+[10.498587] (dataglove) StdoutLine: {'line': b'writing entry points to ../../build/dataglove/dataglove.egg-info/entry_points.txt\n'}
+[10.498863] (dataglove) StdoutLine: {'line': b'writing requirements to ../../build/dataglove/dataglove.egg-info/requires.txt\n'}
+[10.499020] (dataglove) StdoutLine: {'line': b'writing top-level names to ../../build/dataglove/dataglove.egg-info/top_level.txt\n'}
+[10.549126] (-) TimerEvent: {}
+[10.579984] (dataglove) StdoutLine: {'line': b"reading manifest file '../../build/dataglove/dataglove.egg-info/SOURCES.txt'\n"}
+[10.581017] (dataglove) StdoutLine: {'line': b"writing manifest file '../../build/dataglove/dataglove.egg-info/SOURCES.txt'\n"}
+[10.581261] (dataglove) StdoutLine: {'line': b'running build\n'}
+[10.581393] (dataglove) StdoutLine: {'line': b'running build_py\n'}
+[10.581641] (dataglove) StdoutLine: {'line': b'copying dataglove/glove.py -> /home/feld/ros2_ws/build/dataglove/build/lib/dataglove\n'}
+[10.582128] (dataglove) StdoutLine: {'line': b'running install\n'}
+[10.591373] (dataglove) StdoutLine: {'line': b'running install_lib\n'}
+[10.631689] (dataglove) StdoutLine: {'line': b'copying /home/feld/ros2_ws/build/dataglove/build/lib/dataglove/glove.py -> /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove\n'}
+[10.632631] (dataglove) StdoutLine: {'line': b'byte-compiling /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove/glove.py to glove.cpython-312.pyc\n'}
+[10.633976] (dataglove) StdoutLine: {'line': b'running install_data\n'}
+[10.634248] (dataglove) StdoutLine: {'line': b'running install_egg_info\n'}
+[10.649238] (-) TimerEvent: {}
+[10.675252] (dataglove) StdoutLine: {'line': b"removing '/home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[10.675681] (dataglove) StdoutLine: {'line': b'Copying ../../build/dataglove/dataglove.egg-info to /home/feld/ros2_ws/install/dataglove/lib/python3.12/site-packages/dataglove-0.0.0-py3.12.egg-info\n'}
+[10.677178] (dataglove) StdoutLine: {'line': b'running install_scripts\n'}
+[10.749374] (-) TimerEvent: {}
+[10.849667] (-) TimerEvent: {}
+[10.918078] (dataglove) StdoutLine: {'line': b'Installing data_saver script to /home/feld/ros2_ws/install/dataglove/lib/dataglove\n'}
+[10.918395] (dataglove) StdoutLine: {'line': b'Installing glove script to /home/feld/ros2_ws/install/dataglove/lib/dataglove\n'}
+[10.918735] (dataglove) StdoutLine: {'line': b"writing list of installed files to '/home/feld/ros2_ws/build/dataglove/install.log'\n"}
+[10.949840] (-) TimerEvent: {}
+[10.954472] (dataglove) CommandEnded: {'returncode': 0}
+[10.963037] (dataglove) JobEnded: {'identifier': 'dataglove', 'rc': 0}
+[10.963948] (-) EventReactorShutdown: {}

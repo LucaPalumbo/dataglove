@@ -1,0 +1,20 @@
+[0.014s] Invoking command in '/home/feld/ros2_ws/build/tutorial_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/feld/ros2_ws/src/tutorial_interfaces -DCMAKE_INSTALL_PREFIX=/home/feld/ros2_ws/install/tutorial_interfaces
+[0.034s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.520s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.663s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.710s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.729s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.753s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.781s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.852s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.865s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.868s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:95 (message):
+[0.868s]   rosidl_generate_interfaces() the passed file 'msg/Num.msg' doesn't exist
+[0.868s]   relative to the CMAKE_CURRENT_SOURCE_DIR
+[0.869s]   '/home/feld/ros2_ws/src/tutorial_interfaces'
+[0.869s] Call Stack (most recent call first):
+[0.869s]   CMakeLists.txt:30 (rosidl_generate_interfaces)
+[0.869s] 
+[0.869s] [0m
+[0.869s] -- Configuring incomplete, errors occurred!
+[0.875s] Invoked command in '/home/feld/ros2_ws/build/tutorial_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/feld/ros2_ws/install/py_pubsub:/home/feld/ros2_ws/install/dataglove:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/feld/ros2_ws/src/tutorial_interfaces -DCMAKE_INSTALL_PREFIX=/home/feld/ros2_ws/install/tutorial_interfaces
