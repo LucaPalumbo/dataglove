@@ -2,8 +2,11 @@ import torch
 from torch.utils.data import DataLoader
 import torch.optim as optim
 from glove_dataset import GloveDataset
+from early_stopping import EarlyStopping
 from network import Network
 import os
+from tqdm import tqdm
+
 
 
 
@@ -20,28 +23,33 @@ def main():
     validation_dataset = GloveDataset(val_dir, labels)
 
     # Create the DataLoader
-    train_dataloader = DataLoader(train_dataset, batch_size=4, shuffle=True)
-    validation_dataloader = DataLoader(validation_dataset, batch_size=4, shuffle=True)
+    train_dataloader = DataLoader(train_dataset, shuffle=True)
+    validation_dataloader = DataLoader(validation_dataset, shuffle=True)
     net = Network()
+    # print number of parameters
+    num_params = sum(p.numel() for p in net.parameters() if p.requires_grad)
+    print(f"Number of trainable parameters: {num_params}")
+
     optimizer = optim.Adam( net.parameters(), lr = 1e-3)
 
     loss_function = torch.nn.CrossEntropyLoss()  # Define your loss function
     optimizer = torch.optim.Adam(net.parameters(), lr=0.001)  # Define your optimizer
 
+    early_stopping = EarlyStopping(patience=5, verbose=True)  # Initialize early stopping
+
 
     net.to(device)  # Move the network to the device (GPU or CPU)
-    epoch = 100
-    for e in range(epoch):
-        print(f"Epoch {e+1}/{epoch}")
-
+    epoch = 0
+    while True:
 
         net.eval()
-        print("Validation...")
+        # print("Validation...")
         with torch.no_grad():
             total_loss = 0
             correct = 0
             total = 0
-            for batch, labels_id in validation_dataloader:
+            progress_bar = tqdm(validation_dataloader)
+            for batch, labels_id in progress_bar:
                 batch = batch.to(device)
                 labels_id = labels_id.to(device)
                 Network_output = net(batch)
@@ -50,24 +58,30 @@ def main():
                 _, predicted = torch.max(Network_output, 1)
                 total += labels_id.size(0)
                 correct += (predicted == labels_id).sum().item()
-            avg_val_loss = total_loss / len(validation_dataloader)
-            accuracy = correct / total
-            print(f"Validation loss: {avg_val_loss:.4f}, Accuracy: {accuracy:.4f}")
-        print(f"Epoch {e+1} completed.\n")
+                progress_bar.set_description(f'Epoch {epoch+1} - Val Loss: {val_loss.item():.4f}, Accuracy: {correct/total:.4f}')
+        
 
 
-        print("Training...")
+        if early_stopping(total_loss, net):
+            print("Early stopping triggered. Training stopped.")
+            break
+
+
+
         # Iterate through the DataLoader
         net.train()  # Set the network to training mode
-        for batch, labels_id in train_dataloader:
+        progress_bar = tqdm(train_dataloader, unit="batch")
+        for batch, labels_id in progress_bar:
             optimizer.zero_grad()
-            batch = batch.to(device)
+            batch     = batch.to(device)
             labels_id = labels_id.to(device)
             Network_output = net(batch)  # Forward pass through the network
             train_loss = loss_function(Network_output, labels_id)  # Compute the loss
             train_loss.backward()
+            progress_bar.set_description(f'Epoch {epoch+1} - Train Loss: {train_loss.item():.4f}')
             optimizer.step()
-            print(f"Batch loss: {train_loss.item()}")
+        epoch += 1
+
 
         
 
