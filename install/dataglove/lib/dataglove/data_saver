@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!./venv/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'dataglove==0.0.0','console_scripts','data_saver'
 import re
 import sys

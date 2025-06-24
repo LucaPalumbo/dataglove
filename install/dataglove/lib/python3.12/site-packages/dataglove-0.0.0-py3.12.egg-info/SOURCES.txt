@@ -12,7 +12,10 @@ dataglove/__init__.py
 dataglove/data_saver.py
 dataglove/frequency_test.py
 dataglove/glove.py
-dataglove/test.py
+dataglove/glove_emu.py
+dataglove/glove_test.py
+dataglove/network.py
+dataglove/real_time_classifier.py
 dataglove/vmg30.py
 resource/dataglove
 test/test_copyright.py

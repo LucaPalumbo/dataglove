@@ -122,7 +122,7 @@ rosidl_generator_c/dataglove_msgs/msg/vmg30_data.h: /opt/ros/jazzy/share/std_msg
 rosidl_generator_c/dataglove_msgs/msg/vmg30_data.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_c/dataglove_msgs/msg/vmg30_data.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/feld/ros2_ws/build/dataglove_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/feld/ros2_ws/build/dataglove_msgs/rosidl_generator_c__arguments.json
+	/home/feld/ros2_ws/venv/bin/python3 /opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/feld/ros2_ws/build/dataglove_msgs/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/dataglove_msgs/msg/detail/vmg30_data__functions.h: rosidl_generator_c/dataglove_msgs/msg/vmg30_data.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/dataglove_msgs/msg/detail/vmg30_data__functions.h

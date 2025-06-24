@@ -1,4 +1,0 @@
-source;share/dataglove_msgs/local_setup.bash
-source;share/dataglove_msgs/local_setup.dsv
-source;share/dataglove_msgs/local_setup.sh
-source;share/dataglove_msgs/local_setup.zsh

@@ -1,3 +1,0 @@
-[console_scripts]
-data_saver = dataglove.data_saver:main
-glove = dataglove.glove:main

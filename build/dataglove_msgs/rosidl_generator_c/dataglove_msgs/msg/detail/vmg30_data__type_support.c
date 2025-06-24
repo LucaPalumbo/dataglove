@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "dataglove_msgs/msg/detail/vmg30_data__type_support.h"
 #include "dataglove_msgs/msg/detail/vmg30_data__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "dataglove_msgs/msg/detail/vmg30_data__type_support.h"
 #include "dataglove_msgs/msg/detail/vmg30_data__functions.h"
 
 #ifdef __cplusplus

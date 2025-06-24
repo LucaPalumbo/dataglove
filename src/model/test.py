@@ -3,6 +3,7 @@ from torch.utils.data import DataLoader
 from glove_dataset import GloveDataset
 from network import Network
 import os
+import pandas as pd
 from tqdm import tqdm
 
 
@@ -44,6 +45,47 @@ def main():
             total += labels_id.size(0)
             correct += (predicted == labels_id).sum().item()
             progress_bar.set_description(f"Loss: {total_loss / (len(test_dataloader)):.4f}, Accuracy: {correct / total:.4f}")
+
+
+
+def single_test():
+    # Test a single sample
+    directory = "dataset"
+    labels = ["bottle", "pen", "phone"]
+    file_name = '1.csv'  # Example file name, change as needed
+    test_dir = os.path.join(directory, "test")
+    df = pd.read_csv(os.path.join(test_dir, file_name), header=None)
+    
+    used_columns = list(range(2, 25))       # 23 columns
+    used_columns += list(range(28, 32))     # 4 columns
+    used_columns += list(range(35, 39))     # 4 columns
+    df = df.iloc[:, used_columns]
+
+
+    
+
+    net = Network()
+    net.load_state_dict(torch.load("checkpoint.pt"))
+    net.eval()
+    with torch.no_grad():
+        # Normalize first 23 columns to [-1, 1]
+        df.iloc[:, :23] = (df.iloc[:, :23] / 1000.0) * 2 - 1
+
+        # Pad if needed to 100 rows
+        if df.shape[0] < 100:
+            padding = pd.DataFrame(0, index=range(100 - df.shape[0]), columns=df.columns)
+            df = pd.concat([padding, df], ignore_index=True)
+        elif df.shape[0] > 100:
+            df = df.iloc[-100:, :]
+
+        tensor = torch.tensor(df.values, dtype=torch.float32).unsqueeze(0)  # Add batch dimension
+        tensor = tensor.to(torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+        output = net(tensor)
+        _, predicted = torch.max(output, 1)
+        print(f"Predicted label for {file_name}: {labels[predicted.item()]}")
+        
+
+    
 
 
 if __name__ == "__main__":

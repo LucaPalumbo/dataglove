@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_dataglove_msgs_egg.dir/compiler_depe
 include CMakeFiles/ament_cmake_python_build_dataglove_msgs_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_dataglove_msgs_egg:
-	cd /home/feld/ros2_ws/build/dataglove_msgs/ament_cmake_python/dataglove_msgs && /usr/bin/python3 setup.py egg_info
+	cd /home/feld/ros2_ws/build/dataglove_msgs/ament_cmake_python/dataglove_msgs && /home/feld/ros2_ws/venv/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_dataglove_msgs_egg: CMakeFiles/ament_cmake_python_build_dataglove_msgs_egg
 ament_cmake_python_build_dataglove_msgs_egg: CMakeFiles/ament_cmake_python_build_dataglove_msgs_egg.dir/build.make

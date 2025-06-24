@@ -11,7 +11,10 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools'],
+    install_requires=[
+        'setuptools'
+        'torch'
+        ],
     zip_safe=True,
     maintainer='feld',
     maintainer_email='feld@todo.todo',
@@ -22,6 +25,8 @@ setup(
         'console_scripts': [
             'glove = dataglove.glove:main',
             'data_saver = dataglove.data_saver:main',
+            'real_time_classifier = dataglove.real_time_classifier:main',
+            'glove_emu = dataglove.glove_emu:main',
         ],
     },
 )

@@ -4,5 +4,3 @@ dataglove_msgs.egg-info/PKG-INFO
 dataglove_msgs.egg-info/SOURCES.txt
 dataglove_msgs.egg-info/dependency_links.txt
 dataglove_msgs.egg-info/top_level.txt
-dataglove_msgs/msg/__init__.py
-dataglove_msgs/msg/_vmg30_data.py
