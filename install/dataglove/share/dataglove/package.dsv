@@ -1,6 +1,0 @@
-source;share/dataglove/hook/pythonpath.ps1
-source;share/dataglove/hook/pythonpath.dsv
-source;share/dataglove/hook/pythonpath.sh
-source;share/dataglove/hook/ament_prefix_path.ps1
-source;share/dataglove/hook/ament_prefix_path.dsv
-source;share/dataglove/hook/ament_prefix_path.sh

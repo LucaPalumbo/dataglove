@@ -1,5 +1,0 @@
-[console_scripts]
-data_saver = dataglove.data_saver:main
-glove = dataglove.glove:main
-glove_emu = dataglove.glove_emu:main
-real_time_classifier = dataglove.real_time_classifier:main
