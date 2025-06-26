@@ -33,9 +33,9 @@ def main():
     optimizer = optim.Adam( net.parameters(), lr = 1e-3)
 
     loss_function = torch.nn.CrossEntropyLoss()  # Define your loss function
-    optimizer = torch.optim.Adam(net.parameters(), lr=0.001)  # Define your optimizer
+    optimizer = torch.optim.Adam(net.parameters(), lr=1e-3)  # Define your optimizer
 
-    early_stopping = EarlyStopping(patience=5, verbose=True)  # Initialize early stopping
+    early_stopping = EarlyStopping(patience=50, verbose=True)  # Initialize early stopping
 
 
     net.to(device)  # Move the network to the device (GPU or CPU)

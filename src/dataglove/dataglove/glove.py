@@ -15,7 +15,8 @@ class Glove(Node):
         self.test_data_publisher = self.create_publisher(Int32, '/test', 10)
 
         self.timer_period = 0.01  # 100 Hz
-        self.timer = self.create_timer(self.timer_period, self.publish_glove_data)
+        self.timer1 = self.create_timer(self.timer_period, self.publish_glove_data)
+        self.timer2 = self.create_timer(self.timer_period, self.read_glove_data)
 
         #self.timer = self.create_timer(0.1, self.read_glove_data)
         # self.test_timer = self.create_timer(0.1, self.publish_test)
@@ -34,14 +35,12 @@ class Glove(Node):
         # self.test_thread = Thread(target=self.test_thread)
 
         # self.test_thread.start()
-        self.read_thread.start()
+        # self.read_thread.start()
         # self.publish_thread.start()
 
 
         self.get_logger().info('Starting reading from VMG30 glove...')
 
-    # def test_thread(self):
-    #     self.get_logger().info('Test thread started')
 
     def read_loop(self):
         """Thread dedicato alla lettura continua dalla seriale"""
@@ -49,39 +48,29 @@ class Glove(Node):
         while not self.stop_event.is_set():
             self.vmg.read_stream()
 
-    # def publish_loop(self):
-    #     """Thread dedicato alla pubblicazione periodica dei dati"""
-    #     publish_period = 1.0 / 100.0  # 100 Hz - FINE TUNE THIS 
+    def read_glove_data(self):
+        """Funzione chiamata periodicamente per leggere i dati dalla VMG30"""
+        self.vmg.read_stream()
+        self.get_logger().info(f'New packet received: {self.vmg.packet_tick}')
+        # self.vmg.reset_new_packet()
 
-    #     while not self.stop_event.is_set():
-    #         if self.vmg.is_new_packet_available():
-    #             msg = VMG30Data()
-    #             msg.time = time() - self.time_start
-    #             # temp = self.vmg.sensors.astype(np.float32).tolist()
-    #             # self.get_logger().info(f'Raw sensors data: {temp}')
-    #             msg.sensors = self.vmg.sensors.astype(np.float32).tolist()
-    #             msg.rpy_hand = self.vmg.rpy_hand.tolist()
-    #             msg.quat_hand = self.vmg.quaternion_hand.tolist()
-    #             msg.rpy_forearm = self.vmg.rpy_wrist.tolist()
-    #             msg.quat_forearm = self.vmg.quaternion_wrist.tolist()
+        # sleep(self.timer_period)  # Per evitare di sovraccaricare la CPU
 
-    #             self.glove_data_publisher.publish(msg)
-    #             self.get_logger().info(f'sensors {msg.sensors}')
-    #             self.vmg.reset_new_packet()
 
-    #         sleep(publish_period)
 
 
     def publish_glove_data(self):
+        # self.get_logger().info('Publishing glove data...')
         if self.vmg.is_new_packet_available():
             msg = VMG30Data()
             msg.packet_tick = self.vmg.packet_tick
             msg.time = time() - self.time_start
             msg.sensors = self.vmg.sensors.astype(np.float32).tolist()
-            msg.rpy_hand = self.vmg.rpy_hand.tolist()
+            # msg.rpy_hand = self.vmg.rpy_hand.tolist()
             msg.quat_hand = self.vmg.quaternion_hand.tolist()
-            msg.rpy_forearm = self.vmg.rpy_wrist.tolist()
+            # msg.rpy_forearm = self.vmg.rpy_wrist.tolist()
             msg.quat_forearm = self.vmg.quaternion_wrist.tolist()
+            # self.get_logger().info(f'Publishing packet: {msg.packet_tick}, time: {msg.time}, sensors: {msg.sensors}')
 
             self.glove_data_publisher.publish(msg)
             self.vmg.reset_new_packet()

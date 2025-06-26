@@ -29,7 +29,7 @@ class Network(nn.Module):
         self.dense = nn.Sequential(
             nn.Linear(16, 10),  # Paper uses 16 FC units
             nn.ReLU(),
-            nn.Linear(10, 3)
+            nn.Linear(10, 4)
         )
         self.softmax = nn.Softmax(dim=1)
 

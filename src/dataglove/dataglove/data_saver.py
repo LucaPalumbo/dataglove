@@ -10,7 +10,7 @@ class DataSaver(Node):
     def __init__(self):
         super().__init__('data_saver')
         self.get_logger().info('Data Saver Node has been started.')
-        self.file_name = '/home/feld/ros2_ws/src/dataglove/dataset/' + 'test/data_' + str(self.get_clock().now().nanoseconds) + '.txt'
+        self.file_name = '/home/feld/ros2_ws/src/dataglove/dataset/' + 'rest/data_' + str(self.get_clock().now().nanoseconds) + '.txt'
         self.subscription = self.create_subscription(
             VMG30Data,
             '/sensor',

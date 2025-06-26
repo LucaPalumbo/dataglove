@@ -10,6 +10,7 @@ class GloveDataset(Dataset):
         self.labels = labels
         self.label_id = {label: idx for idx, label in enumerate(self.labels)}
         self.data = []  # Store (tensor, label_id) pairs
+        self.time_length = 300
 
         for label in self.labels:
             dir_path = os.path.join(self.directory, label)
@@ -23,20 +24,21 @@ class GloveDataset(Dataset):
                     df = pd.read_csv(file_path, header=None)
 
                     # Select specific columns
-                    used_columns = list(range(2, 25))       # 23 columns
-                    used_columns += list(range(28, 32))     # 4 columns
-                    used_columns += list(range(35, 39))     # 4 columns
+                    # used_columns = list(range(2, 25))       # 23 columns
+                    # used_columns += list(range(28, 32))     # 4 columns
+                    # used_columns += list(range(35, 39))     # 4 columns
+                    used_columns = list(range(2, 25)) + list(range(26, 30)) + list(range(31, 34))
                     df = df.iloc[:, used_columns]
 
                     # Normalize first 23 columns to [-1, 1]
                     df.iloc[:, :23] = (df.iloc[:, :23] / 1000.0) * 2 - 1
 
-                    # Pad if needed to 100 rows
-                    if df.shape[0] < 100:
-                        padding = pd.DataFrame(0, index=range(100 - df.shape[0]), columns=df.columns)
+                    # Pad if needed
+                    if df.shape[0] < self.time_length:
+                        padding = pd.DataFrame(0, index=range(self.time_length - df.shape[0]), columns=df.columns)
                         df = pd.concat([padding, df], ignore_index=True)
-                    elif df.shape[0] > 100:
-                        df = df.iloc[-100:, :]  # keep the last 100 rows
+                    elif df.shape[0] > self.time_length:
+                        df = df.iloc[-self.time_length:, :]  # keep the last rows
 
 
                     tensor = torch.tensor(df.values, dtype=torch.float32).unsqueeze(0)  

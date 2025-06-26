@@ -33,7 +33,7 @@ class RealTimeClassifier(Node):
         concatenated_data = sensors + quat_hand + quat_forearm
         # convert this values to tenor
         tensor_data = torch.tensor(concatenated_data, dtype=torch.float32)
-        print(f'Concatenated data: {tensor_data.shape}')
+        # print(f'Concatenated data: {tensor_data.shape}')
         # Add the new data to the window
         self.window = torch.cat((self.window[1:], tensor_data.unsqueeze(0)), dim=0)
         print(self.window.shape)
@@ -43,11 +43,11 @@ class RealTimeClassifier(Node):
 
     def inference(self):
         window_tensor = self.window.unsqueeze(0).unsqueeze(0)
-        print(f'Window tensor shape: {window_tensor.shape}')
+        # print(f'Window tensor shape: {window_tensor.shape}')
         self.net.eval()  
         with torch.no_grad():
             output = self.net(window_tensor)
-            self.get_logger().info(f'output: {output}')
+            # self.get_logger().info(f'output: {output}')
             # Assuming the output is a tensor of class probabilities
             predicted_class = torch.argmax(output, dim=1).item()
             self.get_logger().info(f'Predicted class: {predicted_class}')

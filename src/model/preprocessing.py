@@ -69,11 +69,12 @@ def train_val_test_split(partition = (0.6, 0.2, 0.2), directory = "dataset"):
 # Example usage
 if __name__ == "__main__":
     directory = [
+        "dataset/rest",
         "dataset/bottle",
         "dataset/pen",
         "dataset/phone"
     ]
-    # for dir in directory:
-    #     remove_brackets_from_files(dir)
+    for dir in directory:
+        remove_brackets_from_files(dir)
     train_val_test_split(directory='dataset')
     
