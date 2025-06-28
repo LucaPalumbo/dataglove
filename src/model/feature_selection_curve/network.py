@@ -17,17 +17,17 @@ class Attention(nn.Module):
     
 
 class Network(nn.Module):
-    def __init__(self):
+    def __init__(self, num_features=31):
         super(Network, self).__init__()
 
         self.relu = nn.ReLU()
         self.conv1 = nn.Conv2d(1, 16, kernel_size=(1, 3), padding=(0, 1))
         self.conv2 = nn.Conv2d(16, 32, kernel_size=(1, 3), padding=(0, 1))
         self.pool = nn.MaxPool2d(kernel_size=(1, 2), stride=(1, 2), padding=(0, 1) )
-        self.bilstm = nn.LSTM(input_size=512, num_layers=2, hidden_size=8, bidirectional=True, batch_first=True)
+        self.bilstm = nn.LSTM(input_size=(num_features+2)//2*32, num_layers=2, hidden_size=8, bidirectional=True, batch_first=True)
         self.attention = Attention(hidden_dim=16)  
         self.dense = nn.Sequential(
-            nn.Linear(16, 10), 
+            nn.Linear(16, 10),  # Paper uses 16 FC units
             nn.ReLU(),
             nn.Linear(10, 4)
         )

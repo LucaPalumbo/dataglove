@@ -1,17 +1,17 @@
 import torch
-from torch.utils.data import DataLoader
-import torch.optim as optim
+import os
 from glove_dataset import GloveDataset
 from early_stopping import EarlyStopping
 from network import Network
-import os
+import pandas as pd
+from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 
 
 
-def main():
-    directory = "dataset"
+def train( num_features = None ):
+    directory = "/home/feld/ros2_ws/src/model/dataset" 
     labels = ["rest", "bottle", "pen", "phone"]
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -19,20 +19,20 @@ def main():
     # Create the dataset
     train_dir = os.path.join(directory, "train")
     val_dir = os.path.join(directory, "validation")
-    train_dataset = GloveDataset(train_dir, labels)
-    validation_dataset = GloveDataset(val_dir, labels)
+    train_dataset = GloveDataset(train_dir, labels, num_features=num_features)
+    validation_dataset = GloveDataset(val_dir, labels, num_features=num_features)
 
     # Create the DataLoader
-    train_dataloader = DataLoader(train_dataset, shuffle=True)
-    validation_dataloader = DataLoader(validation_dataset, shuffle=True)
-    net = Network()
+    train_dataloader = DataLoader(train_dataset, shuffle=True, batch_size=5)
+    validation_dataloader = DataLoader(validation_dataset, shuffle=True, batch_size=5)
+    net = Network(num_features=num_features)
     # print number of parameters
     num_params = sum(p.numel() for p in net.parameters() if p.requires_grad)
     print(f"Number of trainable parameters: {num_params}")
 
 
     loss_function = torch.nn.CrossEntropyLoss()  # Define your loss function
-    optimizer = torch.optim.Adam(net.parameters(), lr=1e-3)  # Define your optimizer
+    optimizer = torch.optim.Adam(net.parameters(), lr=1e-3)  
 
     early_stopping = EarlyStopping(patience=50, verbose=True)  # Initialize early stopping
 
@@ -40,9 +40,7 @@ def main():
     net.to(device)  # Move the network to the device (GPU or CPU)
     epoch = 0
     while True:
-
         net.eval()
-        # print("Validation...")
         with torch.no_grad():
             total_loss = 0
             correct = 0
@@ -57,11 +55,13 @@ def main():
                 _, predicted = torch.max(Network_output, 1)
                 total += labels_id.size(0)
                 correct += (predicted == labels_id).sum().item()
-                progress_bar.set_description(f'Epoch {epoch+1} - Val Loss: {val_loss.item():.4f}, Accuracy: {correct/total:.4f}')
+                accuracy = correct / total
+                progress_bar.set_description(f'Epoch {epoch+1} - Val Loss: {total_loss:.4f}, Accuracy: {accuracy:.4f}')
         
 
-        if early_stopping(total_loss, net):
+        if early_stopping(total_loss, accuracy, net):
             print("Early stopping triggered. Training stopped.")
+            early_stopping.store_results(num_features)
             break
 
 
@@ -81,9 +81,14 @@ def main():
         epoch += 1
 
 
-        
 
 
+
+def main():
+
+    for num_features in range(1, 32):
+        print(f"Training with {num_features} features")
+        train(num_features=num_features)
 
 
 if __name__ == "__main__":

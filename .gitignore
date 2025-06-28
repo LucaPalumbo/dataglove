@@ -3,3 +3,5 @@ build/
 install/
 log/
 src/model/__pycache__/
+src/model/feature_selection_curve/__pycache__/
+src/model/learning_without_forgetting/__pycache__/

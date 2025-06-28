@@ -10,9 +10,9 @@ from tqdm import tqdm
 confusion_matrix = torch.zeros(4, 4)  # Assuming 4 classes
 
 
-def main():
+def test(checkpoint_path="checkpoint.pt"):
     # initiialize model from checkpoint if exists
-    checkpoint_path = "checkpoint.pt"
+    checkpoint_path = checkpoint_path
     if os.path.exists(checkpoint_path):
         print("Loading model from checkpoint...")
         net = Network()
@@ -23,7 +23,7 @@ def main():
     
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    directory = "dataset"
+    directory = "../dataset" 
     labels = ["rest", "bottle", "pen", "phone"]
     test_dir = os.path.join(directory, "test")
     test_dataset = GloveDataset(test_dir, labels)
@@ -52,7 +52,7 @@ def main():
             correct += (predicted == labels_id).sum().item()
             progress_bar.set_description(f"Loss: {total_loss / (len(test_dataloader)):.4f}, Accuracy: {correct / total:.4f}")
 
-    print("Confucsion Matrix:\n" , confusion_matrix)
+    print("Confusion Matrix:\n" , confusion_matrix)
 
 
 # def single_test():
@@ -90,7 +90,9 @@ def main():
 #         print(f"Predicted label for {file_name}: {labels[predicted.item()]}")
         
 
-    
+def main():
+    chekpoint_path = "distillated_checkpoint.pt"
+    test(chekpoint_path)
 
 
 if __name__ == "__main__":

@@ -17,21 +17,36 @@ class Attention(nn.Module):
     
 
 class Network(nn.Module):
-    def __init__(self):
+    def __init__(self, num_features=31, output_classes=4, old_model=None, old_model_output_classes=2):
         super(Network, self).__init__()
 
         self.relu = nn.ReLU()
         self.conv1 = nn.Conv2d(1, 16, kernel_size=(1, 3), padding=(0, 1))
         self.conv2 = nn.Conv2d(16, 32, kernel_size=(1, 3), padding=(0, 1))
         self.pool = nn.MaxPool2d(kernel_size=(1, 2), stride=(1, 2), padding=(0, 1) )
-        self.bilstm = nn.LSTM(input_size=512, num_layers=2, hidden_size=8, bidirectional=True, batch_first=True)
+        self.bilstm = nn.LSTM(input_size=(num_features+2)//2*32, num_layers=2, hidden_size=8, bidirectional=True, batch_first=True)
         self.attention = Attention(hidden_dim=16)  
         self.dense = nn.Sequential(
-            nn.Linear(16, 10), 
+            nn.Linear(16, 10),  # Paper uses 16 FC units
             nn.ReLU(),
-            nn.Linear(10, 4)
+            nn.Linear(10, output_classes)
         )
         self.softmax = nn.Softmax(dim=1)
+
+
+        if old_model is not None:
+            with torch.no_grad():
+                # Initialize the new model with the old model's weights
+                self.conv1.weight.data = old_model.conv1.weight.data.clone()
+                self.conv2.weight.data = old_model.conv2.weight.data.clone()
+                self.bilstm.load_state_dict(old_model.bilstm.state_dict(), strict=False)
+                self.attention.load_state_dict(old_model.attention.state_dict(), strict=False)
+                self.dense[0].weight.data = old_model.dense[0].weight.data.clone()
+                self.dense[0].bias.data = old_model.dense[0].bias.data.clone()
+                
+                self.dense[2].weight[:old_model_output_classes] = old_model.dense[2].weight
+                self.dense[2].bias[:old_model_output_classes] = old_model.dense[2].bias
+        
 
 
 
