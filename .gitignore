@@ -2,6 +2,7 @@ venv/
 build/
 install/
 log/
-src/model/__pycache__/
-src/model/feature_selection_curve/__pycache__/
-src/model/learning_without_forgetting/__pycache__/
+src/nn/__pycache__/
+src/nn/feature_selection_curve/__pycache__/
+src/nn/learning_without_forgetting/__pycache__/
+src/nn/nn/__pycache__/

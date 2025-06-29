@@ -1,0 +1,111 @@
+import torch
+from tqdm import tqdm
+from torch.utils.data import DataLoader
+from torch.nn import functional as F
+from nn.early_stopping import EarlyStopping
+from nn.glove_dataset import GloveDataset
+from nn.network import Network
+
+
+def distillation_loss(student_output, teacher_output, temperature=2.0):
+    """
+    Compute the distillation loss between the student and teacher outputs.
+    """
+    student_probs = F.softmax(student_output / temperature, dim=1)
+    teacher_probs = F.softmax(teacher_output / temperature, dim=1)
+    return F.kl_div(student_probs.log(), teacher_probs, reduction='batchmean') * (temperature * temperature)
+
+
+def lwf_train(teacher, student, dataset_train, dataset_val, lambda_distill = 5): 
+    old_classes = 2
+    new_classes = 4
+
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    student.to(device)
+    teacher.to(device)    
+    loss_function = torch.nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(student.parameters(), lr=1e-3)
+    dataloader_train = DataLoader(dataset_train, shuffle=True, batch_size=5)
+    dataloader_val = DataLoader(dataset_val, shuffle=True, batch_size=5)
+    early_stopping = EarlyStopping(patience=50, delta=0.0001, verbose=True)  
+
+    teacher.eval()  
+    epoch = 0
+    while True:
+        student.train()
+        total_loss = 0
+        progress_bar = tqdm(dataloader_train, desc=f'Epoch {epoch+1}')
+        for batch, labels_id in progress_bar:
+            optimizer.zero_grad()
+            batch = batch.to(device)
+            labels_id = labels_id.to(device) + old_classes  
+
+            # Forward pass through the student model
+            student_output = student(batch)
+
+            # Forward pass through the teacher model
+            with torch.no_grad():
+                teacher_output = teacher(batch)
+
+            # Compute the distillation loss
+            dist_loss = distillation_loss(student_output[:,:2], teacher_output)
+            # Compute the classification loss
+            class_loss = loss_function(student_output, labels_id)
+            # Combine the losses
+            loss = class_loss + lambda_distill * dist_loss
+            loss.backward()
+            optimizer.step()
+
+            total_loss += loss.item()
+            progress_bar.set_description(f'Epoch {epoch+1} - Loss: {total_loss:.4f}')
+
+
+        progress_bar = tqdm(dataloader_val, desc=f'Validation Epoch {epoch+1}')
+        with torch.no_grad():
+            total_val_loss = 0
+            correct_val = 0
+            total_val = 0
+            for batch, labels_id in progress_bar:
+                batch = batch.to(device)
+                labels_id = labels_id.to(device) + old_classes  
+
+                student_output = student(batch)
+                teacher_output = teacher(batch)
+
+                val_loss = loss_function(student_output, labels_id) + lambda_distill * distillation_loss(student_output[:,:2], teacher_output)
+                total_val_loss += val_loss.item()
+
+                _, predicted = torch.max(student_output, 1)
+                total_val += labels_id.size(0)
+                correct_val += (predicted == labels_id).sum().item()
+
+                accuracy = correct_val / total_val
+                progress_bar.set_description(f'Validation Loss: {total_val_loss:.4f}, Accuracy: {accuracy:.4f}')
+
+
+        if early_stopping(student, total_val_loss, accuracy, 'distillated_checkpoint.pt'):
+            print("Early stopping triggered. Training stopped.")
+            break
+
+        epoch += 1
+
+
+
+
+def main():
+    old_model = Network(output_classes=2)
+    old_model.load_state_dict(torch.load("checkpoint.pt"))
+
+    output_classes = 4
+    old_model_output_classes = 2
+    new_model = Network(output_classes=output_classes, old_model=old_model, old_model_output_classes=old_model_output_classes)
+    added_classes = output_classes - old_model_output_classes
+
+    dataset_train = GloveDataset("./dataset/train", ["pen", "phone"])
+    dataset_val = GloveDataset("./dataset/validation", ["pen", "phone"])
+
+    lwf_train(old_model, new_model, dataset_train, dataset_val)
+
+if __name__ == "__main__":
+    main()
