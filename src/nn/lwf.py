@@ -25,7 +25,7 @@ def lwf_train(teacher, student, dataset_train, dataset_val, lambda_distill = 5):
     student.to(device)
     teacher.to(device)    
     loss_function = torch.nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(student.parameters(), lr=1e-3)
+    optimizer = torch.optim.Adam(student.parameters(), lr=1e-4) # lr 10 time smaller than in train.py
     dataloader_train = DataLoader(dataset_train, shuffle=True, batch_size=5)
     dataloader_val = DataLoader(dataset_val, shuffle=True, batch_size=5)
     early_stopping = EarlyStopping(patience=50, delta=0.0001, verbose=True)  

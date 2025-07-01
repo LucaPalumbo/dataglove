@@ -17,6 +17,55 @@ def remove_brackets_from_files(directory):
     print(f"Brackets removed from all files in {directory}")
 
 
+def remove_empty_column(directory):
+    for filename in os.listdir(directory):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(directory, filename)
+            with open(file_path, 'r') as file:
+                lines = file.readlines()
+            # Split header and rows
+            rows = [line.strip().split(',') for line in lines]
+            # Transpose to get columns
+            columns = list(zip(*rows))
+            # Find indices of columns that are not completely empty
+            keep_indices = [i for i, col in enumerate(columns) if any(cell.strip() for cell in col)]
+            # Remove empty columns
+            new_rows = []
+            for row in rows:
+                new_row = [row[i] for i in keep_indices]
+                new_rows.append(','.join(new_row))
+            # Write back to file
+            with open(file_path, 'w') as file:
+                file.write('\n'.join(new_rows))
+    print(f"Empty columns removed from all CSV files in {directory}")
+
+
+def remove_columns(directory, columns_to_remove):
+    """
+    Removes specified columns from all CSV files in the given directory.
+    
+    Args:
+        directory (str): The directory containing the CSV files.
+        columns_to_remove (list): List of column indices to remove (0-based).
+    """
+    for filename in os.listdir(directory):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(directory, filename)
+            with open(file_path, 'r') as file:
+                lines = file.readlines()
+            # Split header and rows
+            rows = [line.strip().split(',') for line in lines]
+            # Remove specified columns
+            new_rows = []
+            for row in rows:
+                new_row = [cell for i, cell in enumerate(row) if i not in columns_to_remove]
+                new_rows.append(','.join(new_row))
+            # Write back to file
+            with open(file_path, 'w') as file:
+                file.write('\n'.join(new_rows))
+    print(f"Specified columns removed from all CSV files in {directory}")
+
+
 def train_val_test_split(partition = (0.6, 0.2, 0.2), directory = "dataset"):
     """
     Splits the dataset into training, validation, and test sets.
@@ -138,14 +187,17 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    # directory = [
-    #     "dataset/rest",
-    #     "dataset/bottle",
-    #     "dataset/pen",
-    #     "dataset/phone"
-    # ]
-    # for dir in directory:
-    #     remove_brackets_from_files(dir)
+    directory = [
+        "/home/feld/ros2_ws/datasets/corrupted_dataset_filtered_usable/rest",
+        "/home/feld/ros2_ws/datasets/corrupted_dataset_filtered_usable/bottle",
+        "/home/feld/ros2_ws/datasets/corrupted_dataset_filtered_usable/pen",
+        "/home/feld/ros2_ws/datasets/corrupted_dataset_filtered_usable/phone"
+    ]
+    for dir in directory:
+        # remove_brackets_from_files(dir)
+        remove_empty_column(dir)
+
+
     if args.split:
         train_val_test_split(directory='dataset')
 

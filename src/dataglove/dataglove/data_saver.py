@@ -10,7 +10,7 @@ class DataSaver(Node):
     def __init__(self):
         super().__init__('data_saver')
         self.get_logger().info('Data Saver Node has been started.')
-        self.file_name = '/home/feld/ros2_ws/src/dataglove/dataset/' + 'rest/data_' + str(self.get_clock().now().nanoseconds) + '.txt'
+        self.file_name = '/home/feld/ros2_ws/datasets/test/' + 'data_' + str(self.get_clock().now().nanoseconds) + '.txt'
         self.subscription = self.create_subscription(
             VMG30Data,
             '/sensor',
@@ -33,17 +33,20 @@ class DataSaver(Node):
         packet_tick = msg.packet_tick
         time = msg.time
         sensors = msg.sensors.tolist()  
-        rpy_hand = msg.rpy_hand.tolist()
         quat_hand = msg.quat_hand.tolist()
-        rpy_forearm = msg.rpy_forearm.tolist()
         quat_forearm = msg.quat_forearm.tolist()
+
+        # Converti le liste in stringhe separate da virgole
+        sensors_str = ",".join(map(str, sensors))
+        quat_hand_str = ",".join(map(str, quat_hand))
+        quat_forearm_str = ",".join(map(str, quat_forearm))
         
         # store to a file 
         # self.get_logger().info(f'sensors: {sensors.tolist()}')
         with open(self.file_name, 'a') as f:
-            f.write(f"{packet_tick}, {time}, {sensors}, {rpy_hand}, {quat_hand}, {rpy_forearm}, {quat_forearm}\n")
+            f.write(f"{packet_tick}, {time}, {sensors_str}, {quat_hand_str}, {quat_forearm_str}\n")
 
-        self.get_logger().info(f'Saved data: {packet_tick}, {time}, {sensors}, {rpy_hand}, {quat_hand}, {rpy_forearm}, {quat_forearm}')
+        self.get_logger().info(f'Saved data: {packet_tick}, {time}, {sensors}, {quat_hand}, {quat_forearm}')
 
     def test_callback(self, msg):
         self.get_logger().info('Test callback received: "%s"' % msg.data)

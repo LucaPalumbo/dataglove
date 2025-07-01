@@ -66,9 +66,7 @@ class Glove(Node):
             msg.packet_tick = self.vmg.packet_tick
             msg.time = time() - self.time_start
             msg.sensors = self.vmg.sensors.astype(np.float32).tolist()
-            # msg.rpy_hand = self.vmg.rpy_hand.tolist()
             msg.quat_hand = self.vmg.quaternion_hand.tolist()
-            # msg.rpy_forearm = self.vmg.rpy_wrist.tolist()
             msg.quat_forearm = self.vmg.quaternion_wrist.tolist()
             # self.get_logger().info(f'Publishing packet: {msg.packet_tick}, time: {msg.time}, sensors: {msg.sensors}')
 
