@@ -193,14 +193,14 @@ if __name__ == "__main__":
         "/home/feld/ros2_ws/datasets/corrupted_dataset_filtered_usable/pen",
         "/home/feld/ros2_ws/datasets/corrupted_dataset_filtered_usable/phone"
     ]
-    for dir in directory:
+    # for dir in directory:
         # remove_brackets_from_files(dir)
-        remove_empty_column(dir)
+        # remove_empty_column(dir)
 
-
+    directory = '/home/feld/ros2_ws/datasets/dataset_merged2'
     if args.split:
-        train_val_test_split(directory='dataset')
+        train_val_test_split(directory = directory)
 
     if args.k != 0:
-        k_fold_split(k = args.k, directory='./dataset')
+        k_fold_split(k = args.k, directory=directory)
     

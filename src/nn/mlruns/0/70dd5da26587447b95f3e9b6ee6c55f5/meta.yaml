@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/70dd5da26587447b95f3e9b6ee6c55f5/artifacts
+end_time: 1751490550859
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 70dd5da26587447b95f3e9b6ee6c55f5
+run_name: beautiful-shoat-680
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751490546792
+status: 4
+tags: []
+user_id: feld

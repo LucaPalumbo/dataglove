@@ -6,17 +6,25 @@ import os
 import pandas as pd
 from tqdm import tqdm
 import argparse
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 
+# labels = ["rest", "bottle", "pen", "phone"]
+labels = ["rest", "bottle", "pen", "phone", "mouse", "glasses"]
+
+confusion_matrix = torch.zeros(len(labels), len(labels))  # Assuming 4 classes
 
 
-def test(checkpoint_path="checkpoint.pt", dir = "test"):
-    confusion_matrix = torch.zeros(4, 4)  # Assuming 4 classes
+def test(directory = 'dataset', checkpoint_path="checkpoint.pt", dir = "test"):
+
+
 
     # initiialize model from checkpoint if exists
     if os.path.exists(checkpoint_path):
         print("Loading model from checkpoint...")
-        net = Network()
+        net = Network(output_classes=4)
+        net.classifier.add_task(output_classes=2) 
         net.load_state_dict(torch.load(checkpoint_path))
     else:
         print("No checkpoint found, initializing new model...")
@@ -24,8 +32,6 @@ def test(checkpoint_path="checkpoint.pt", dir = "test"):
     
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    directory = "dataset"
-    labels = ["rest", "bottle", "pen", "phone"]
     test_dir = os.path.join(directory, dir)
     test_dataset = GloveDataset(test_dir, labels)
     test_dataloader = DataLoader(test_dataset, shuffle=False, batch_size=1)
@@ -54,6 +60,16 @@ def test(checkpoint_path="checkpoint.pt", dir = "test"):
             progress_bar.set_description(f"Loss: {total_loss / (len(test_dataloader)):.4f}, Accuracy: {correct / total:.4f}")
 
     print("Confusion Matrix:\n" , confusion_matrix)
+
+def plot_confusion_matrix():
+
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(confusion_matrix.numpy(), annot=True, fmt='g', cmap='Blues',
+                xticklabels=labels, yticklabels=labels)
+    plt.xlabel('Predicted')
+    plt.ylabel('True')
+    plt.title('Confusion Matrix')
+    plt.show()
 
 
 # def single_test():
@@ -96,9 +112,16 @@ def main():
     parser = argparse.ArgumentParser(description="Test the model on the dataset.")
     parser.add_argument('--checkpoint', type=str, default="checkpoint.pt", help='Path to the model checkpoint')
     parser.add_argument('--validation', action='store_true', help='Run validation instead of test')
+    parser.add_argument('--plot', action='store_true', help='Plot confusion matrix')
     args = parser.parse_args()
 
-    test(args.checkpoint, "validation" if args.validation else "test")
+
+    directory = '/home/feld/ros2_ws/datasets/dataset_merged2'  # Change this to your dataset directory
+    test(directory, args.checkpoint, "validation" if args.validation else "test")
+
+    if args.plot:
+        print("Plotting confusion matrix...")
+        plot_confusion_matrix()
 
 
 if __name__ == "__main__":

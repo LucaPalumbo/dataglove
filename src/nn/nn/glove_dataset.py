@@ -23,7 +23,8 @@ class GloveDataset(Dataset):
                 if os.path.isfile(file_path):
                     df = pd.read_csv(file_path, header=None)
 
-                    used_columns = list(range(2, 25)) + list(range(26, 30)) + list(range(31, 35))
+                    # used_columns = list(range(2, 25)) + list(range(26, 30)) + list(range(31, 35))
+                    used_columns = list(range(2,33))
                     if num_features is not None:
                         used_columns = used_columns[:num_features]
                     df = df.iloc[:, used_columns]

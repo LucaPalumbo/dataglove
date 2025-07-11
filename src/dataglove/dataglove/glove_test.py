@@ -21,8 +21,8 @@ def main():
                 print("Sensors:", sensors)
 
                 # stampa orientamenti
-                print("Wrist RPY:", glove.rpy_wrist)
-                print("Hand RPY:", glove.rpy_hand)
+                # print("Wrist RPY:", glove.rpy_wrist)
+                # print("Hand RPY:", glove.rpy_hand)
 
                 print("Wrist quaternion:", glove.quaternion_wrist)
                 print("Hand quaternion:", glove.quaternion_hand)

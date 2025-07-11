@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/2443713ce7914705b8b299f64f0fff5d/artifacts
+end_time: 1751536888251
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2443713ce7914705b8b299f64f0fff5d
+run_name: wistful-smelt-496
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751536830990
+status: 3
+tags: []
+user_id: feld

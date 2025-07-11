@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/64d8fa102ea54042b7d73e249ae9bd98/artifacts
+end_time: 1751478779163
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 64d8fa102ea54042b7d73e249ae9bd98
+run_name: valuable-zebra-429
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751478710812
+status: 3
+tags: []
+user_id: feld

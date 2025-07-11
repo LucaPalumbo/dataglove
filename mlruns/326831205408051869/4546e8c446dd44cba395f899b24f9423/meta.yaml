@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/326831205408051869/4546e8c446dd44cba395f899b24f9423/artifacts
+end_time: 1751477146495
+entry_point_name: ''
+experiment_id: '326831205408051869'
+lifecycle_stage: active
+run_id: 4546e8c446dd44cba395f899b24f9423
+run_name: indecisive-stork-319
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751477146469
+status: 3
+tags: []
+user_id: feld

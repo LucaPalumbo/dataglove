@@ -32,7 +32,7 @@ def train( directory , num_features = None ):
     loss_function = torch.nn.CrossEntropyLoss()  # Define your loss function
     optimizer = torch.optim.Adam(net.parameters(), lr=1e-3)  
 
-    early_stopping = EarlyStopping(patience=50, verbose=True)  # Initialize early stopping
+    early_stopping = EarlyStopping(patience=20, verbose=True, delta=0.0007)  # Initialize early stopping
 
 
     net.to(device)  # Move the network to the device (GPU or CPU)
@@ -113,7 +113,7 @@ def plot_feature_selection_curve(losses, accuracies, std_losses, std_accuracies)
 
 
 def plot():
-    df = pd.read_csv("results.csv")
+    df = pd.read_csv("feature_curve_results.csv")
 
     losses = []
     accuracies = []
@@ -153,9 +153,9 @@ def main():
         return
 
 
-    for num_features in range(1, 32):
+    for num_features in range(6, 32):
         for i in range(1, 6):
-            directory = f"./dataset/folds/fold_{i}/" 
+            directory = f"/home/feld/ros2_ws/datasets/dataset_merged/folds/fold_{i}" 
 
             print(f"Training with {num_features} features")
             train(directory, num_features=num_features)

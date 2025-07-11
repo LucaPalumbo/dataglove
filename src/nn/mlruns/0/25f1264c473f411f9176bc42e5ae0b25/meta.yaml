@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/25f1264c473f411f9176bc42e5ae0b25/artifacts
+end_time: 1752143723207
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 25f1264c473f411f9176bc42e5ae0b25
+run_name: luminous-sow-474
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752143722755
+status: 4
+tags: []
+user_id: feld

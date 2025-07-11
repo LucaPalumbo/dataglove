@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/87efe5b2861b4654aace1e002917cebd/artifacts
+end_time: 1751537148040
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 87efe5b2861b4654aace1e002917cebd
+run_name: masked-skink-902
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751537039845
+status: 3
+tags: []
+user_id: feld

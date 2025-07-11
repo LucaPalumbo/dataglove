@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/66c983a03a884297b7c15ff501307979/artifacts
+end_time: 1751478630561
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 66c983a03a884297b7c15ff501307979
+run_name: bustling-jay-831
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751478477062
+status: 4
+tags: []
+user_id: feld

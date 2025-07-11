@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/112ff30425e345c38db440431ed8b6b3/artifacts
+end_time: 1752238714314
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 112ff30425e345c38db440431ed8b6b3
+run_name: smiling-squid-421
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752238640520
+status: 3
+tags: []
+user_id: feld

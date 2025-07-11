@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/5060eda3f1cd4eda96da30b273572847/artifacts
+end_time: 1751537030914
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5060eda3f1cd4eda96da30b273572847
+run_name: worried-horse-649
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751537029002
+status: 4
+tags: []
+user_id: feld

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/b23cc9ffeb96452e959d5ed4a0dd8fb7/artifacts
+end_time: 1752144719529
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b23cc9ffeb96452e959d5ed4a0dd8fb7
+run_name: upbeat-stag-349
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752144598870
+status: 3
+tags: []
+user_id: feld

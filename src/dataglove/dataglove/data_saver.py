@@ -3,6 +3,7 @@ from rclpy.node import Node
 
 from std_msgs.msg import String, Int32
 from dataglove_msgs.msg import VMG30Data
+import os
 
 
 class DataSaver(Node):
@@ -10,7 +11,18 @@ class DataSaver(Node):
     def __init__(self):
         super().__init__('data_saver')
         self.get_logger().info('Data Saver Node has been started.')
-        self.file_name = '/home/feld/ros2_ws/datasets/test/' + 'data_' + str(self.get_clock().now().nanoseconds) + '.txt'
+        # self.file_name = '/home/feld/ros2_ws/datasets/test/' + 'data_' + str(self.get_clock().now().nanoseconds) + '.txt'
+        self.dir_name = "/home/feld/ros2_ws/datasets/new_dataset/"
+        self.object_name = "pen" # CHANGE THIS TO THE OBJECT YOU ARE SAVING DATA FOR
+        os.makedirs(os.path.join(self.dir_name, self.object_name), exist_ok=True)
+        index = 0 
+        while os.path.exists( os.path.join(self.dir_name, self.object_name, str(index) + '.txt') ):
+            index += 1
+        self.file_name = os.path.join(self.dir_name, self.object_name, str(index) + '.txt')
+        self.get_logger().info(f'Saving data to file: {self.file_name}')
+        
+
+
         self.subscription = self.create_subscription(
             VMG30Data,
             '/sensor',
@@ -46,7 +58,7 @@ class DataSaver(Node):
         with open(self.file_name, 'a') as f:
             f.write(f"{packet_tick}, {time}, {sensors_str}, {quat_hand_str}, {quat_forearm_str}\n")
 
-        self.get_logger().info(f'Saved data: {packet_tick}, {time}, {sensors}, {quat_hand}, {quat_forearm}')
+        self.get_logger().info(f'Saved data: {sensors}')
 
     def test_callback(self, msg):
         self.get_logger().info('Test callback received: "%s"' % msg.data)

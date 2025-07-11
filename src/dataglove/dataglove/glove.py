@@ -26,11 +26,11 @@ class Glove(Node):
         self.vmg.send_start_packet(0x1)  # PKT_TYPE_QUAT_FINGER
 
         # Eventi di terminazione per i thread
-        self.stop_event = Event()
+        # self.stop_event = Event()
         self.time_start = time()
 
         # Thread per la lettura continua dalla seriale
-        self.read_thread = Thread(target=self.read_loop)
+        # self.read_thread = Thread(target=self.read_loop)
         # self.publish_thread = Thread(target=self.publish_loop)
         # self.test_thread = Thread(target=self.test_thread)
 

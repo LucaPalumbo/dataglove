@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/b023322a538f4fff8e50f53c32935c72/artifacts
+end_time: 1751492381845
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b023322a538f4fff8e50f53c32935c72
+run_name: unleashed-bass-314
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751492379512
+status: 4
+tags: []
+user_id: feld

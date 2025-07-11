@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/94c4a897ce2240deaf2daf44d827a377/artifacts
+end_time: 1751536744831
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 94c4a897ce2240deaf2daf44d827a377
+run_name: sedate-moose-810
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751536741727
+status: 4
+tags: []
+user_id: feld

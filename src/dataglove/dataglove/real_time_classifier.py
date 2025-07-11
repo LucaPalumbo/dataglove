@@ -15,7 +15,7 @@ class RealTimeClassifier(Node):
         self.window = torch.zeros((100, 31), dtype=torch.float32)
         
         self.net = Network()  
-        self.net.load_state_dict(torch.load('/home/feld/ros2_ws/src/model/checkpoint.pt'))
+        self.net.load_state_dict(torch.load('/home/feld/ros2_ws/src/nn/checkpoint.pt'))
         
         self.subscription = self.create_subscription(
             VMG30Data,  # Replace with the actual message type you expect
@@ -36,12 +36,12 @@ class RealTimeClassifier(Node):
         # print(f'Concatenated data: {tensor_data.shape}')
         # Add the new data to the window
         self.window = torch.cat((self.window[1:], tensor_data.unsqueeze(0)), dim=0)
-        print(self.window.shape)
 
         self.inference()
 
 
     def inference(self):
+        labels = ["rest", "bottle", "pen", "phone", "mouse", "glasses"]
         window_tensor = self.window.unsqueeze(0).unsqueeze(0)
         # print(f'Window tensor shape: {window_tensor.shape}')
         self.net.eval()  
@@ -50,7 +50,7 @@ class RealTimeClassifier(Node):
             # self.get_logger().info(f'output: {output}')
             # Assuming the output is a tensor of class probabilities
             predicted_class = torch.argmax(output, dim=1).item()
-            self.get_logger().info(f'Predicted class: {predicted_class}')
+            self.get_logger().info(f'Predicted class: {predicted_class}: {labels[predicted_class]}')
 
 
 
