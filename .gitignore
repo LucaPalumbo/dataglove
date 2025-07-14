@@ -1,4 +1,6 @@
 venv/
+mlruns/
+src/nn/mlruns/
 build/
 install/
 log/

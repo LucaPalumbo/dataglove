@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/2d20e1e49be645d893c28d6af1da5262/artifacts
+deleted_time: 1752420064928
 end_time: 1752162180455
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 2d20e1e49be645d893c28d6af1da5262
 run_name: bright-fish-691
 source_name: ''

@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/112ff30425e345c38db440431ed8b6b3/artifacts
+deleted_time: 1752420064918
 end_time: 1752238714314
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 112ff30425e345c38db440431ed8b6b3
 run_name: smiling-squid-421
 source_name: ''

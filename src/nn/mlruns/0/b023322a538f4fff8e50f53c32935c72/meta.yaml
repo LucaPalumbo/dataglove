@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/b023322a538f4fff8e50f53c32935c72/artifacts
+deleted_time: 1752420090209
 end_time: 1751492381845
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: b023322a538f4fff8e50f53c32935c72
 run_name: unleashed-bass-314
 source_name: ''

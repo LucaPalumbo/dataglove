@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/87efe5b2861b4654aace1e002917cebd/artifacts
+deleted_time: 1752420082308
 end_time: 1751537148040
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 87efe5b2861b4654aace1e002917cebd
 run_name: masked-skink-902
 source_name: ''

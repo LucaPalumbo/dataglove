@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/60cdd22134404857ac1fe4a5909863cc/artifacts
+deleted_time: 1752420064949
 end_time: 1751538300080
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 60cdd22134404857ac1fe4a5909863cc
 run_name: clumsy-steed-431
 source_name: ''

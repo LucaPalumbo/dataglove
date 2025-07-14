@@ -1,9 +1,9 @@
 import torch
 from torch import nn
 
-class LwfClassifier(nn.Module):
+class Classifier(nn.Module):
     def __init__(self, input_size, n_tasks=1, output_classes = [4] ):
-        super(LwfClassifier, self).__init__()
+        super(Classifier, self).__init__()
         self.input_size = input_size
         self.classifiers = nn.ModuleList()
         for i in range(n_tasks):
@@ -50,7 +50,7 @@ class Network(nn.Module):
         self.attention = Attention(hidden_dim=32)  
         self.dense1 = nn.Linear(32, 20)
         # self.dense2 = nn.Linear(10, output_classes)  
-        self.classifier = LwfClassifier(20, output_classes=[output_classes])
+        self.classifier = Classifier(20, output_classes=[output_classes])
         self.softmax = nn.Softmax(dim=1)
 
 

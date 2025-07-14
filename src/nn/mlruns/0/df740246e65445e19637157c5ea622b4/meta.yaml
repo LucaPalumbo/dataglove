@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/df740246e65445e19637157c5ea622b4/artifacts
+deleted_time: 1752420082328
 end_time: 1751492404189
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: df740246e65445e19637157c5ea622b4
 run_name: whimsical-shrimp-681
 source_name: ''

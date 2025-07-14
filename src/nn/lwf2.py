@@ -16,7 +16,7 @@ def distillation_loss(student_output, teacher_output, temperature=2.0):
     return F.kl_div(student_probs.log(), teacher_probs, reduction='batchmean') * (temperature * temperature)
 
 
-def lwf_train(teacher, student, dataset_train, dataset_val, lambda_distill = 0.1, warm_up=False): 
+def lwf_train(teacher, student, dataset_train, dataset_val, lambda_distill = 1, warm_up=False): 
     old_classes = 4
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

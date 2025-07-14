@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/66c983a03a884297b7c15ff501307979/artifacts
+deleted_time: 1752420082337
 end_time: 1751478630561
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 66c983a03a884297b7c15ff501307979
 run_name: bustling-jay-831
 source_name: ''

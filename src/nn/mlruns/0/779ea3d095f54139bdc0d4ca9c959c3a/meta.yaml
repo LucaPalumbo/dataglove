@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/779ea3d095f54139bdc0d4ca9c959c3a/artifacts
+deleted_time: 1752420082327
 end_time: 1751536551343
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 779ea3d095f54139bdc0d4ca9c959c3a
 run_name: zealous-gull-520
 source_name: ''

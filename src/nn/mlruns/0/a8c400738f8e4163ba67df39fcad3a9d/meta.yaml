@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/a8c400738f8e4163ba67df39fcad3a9d/artifacts
+deleted_time: 1752420064915
 end_time: 1752162392207
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: a8c400738f8e4163ba67df39fcad3a9d
 run_name: redolent-croc-319
 source_name: ''

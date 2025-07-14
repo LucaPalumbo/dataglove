@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/da42fb2057ee490898134280dee8d32e/artifacts
+deleted_time: 1752420064943
 end_time: 1752143968632
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: da42fb2057ee490898134280dee8d32e
 run_name: nosy-gull-760
 source_name: ''

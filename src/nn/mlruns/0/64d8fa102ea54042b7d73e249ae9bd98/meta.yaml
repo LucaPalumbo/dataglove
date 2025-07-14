@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/64d8fa102ea54042b7d73e249ae9bd98/artifacts
+deleted_time: 1752420082332
 end_time: 1751478779163
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 64d8fa102ea54042b7d73e249ae9bd98
 run_name: valuable-zebra-429
 source_name: ''

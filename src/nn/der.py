@@ -9,7 +9,9 @@ import copy
 
 
 
-def r_train( student, dataset_train, dataset_val, warm_up=False): 
+
+
+def lwf_train(old_model, student, dataset_train, dataset_train_replay, dataset_val, dist_lambda = 1,  warm_up=False): 
     old_classes = 4
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -25,6 +27,8 @@ def r_train( student, dataset_train, dataset_val, warm_up=False):
     optimizer = torch.optim.Adam(student.parameters(), lr=1e-4) # lr 10 time smaller than in train.py
     # optimizer = torch.optim.SGD(student.parameters(), **optimizer_params)  # Using SGD with momentum and weight decay
     dataloader_train = DataLoader(dataset_train, shuffle=True, batch_size=5)
+    dataloader_train_replay = DataLoader(dataset_train_replay, shuffle=True, batch_size=1)
+
     dataloader_val = DataLoader(dataset_val, shuffle=True, batch_size=5)
     early_stopping = EarlyStopping(patience=50, delta=0.0006, verbose=True)
 
@@ -36,15 +40,10 @@ def r_train( student, dataset_train, dataset_val, warm_up=False):
         for batch, labels_id in progress_bar:
             optimizer.zero_grad()
             batch = batch.to(device)
-            labels_id = labels_id.to(device) #+ old_classes  
+            labels_id = labels_id.to(device) + old_classes  
 
-            # Forward pass through the student model
             student_output = student(batch)
 
-
-            # Compute the distillation loss
-            # dist_loss = distillation_loss(student_output[:,:old_classes], teacher_output)
-            # Compute the classification loss
             loss = loss_function(student_output, labels_id)
             # Combine the losses
             loss.backward()
@@ -52,6 +51,21 @@ def r_train( student, dataset_train, dataset_val, warm_up=False):
 
             total_loss += loss.item()
             progress_bar.set_description(f'Epoch {epoch+1} - Loss: {total_loss:.4f}')
+
+
+        for batch, labels_id in dataloader_train_replay:
+            batch = batch.to(device)
+            labels_id = labels_id.to(device) + old_classes
+            with torch.no_grad():
+                teacher_output = old_model(batch)
+            student_output = student(batch)
+            # loss as 2-norm 
+            dist_loss = F.mse_loss(student_output[:,:old_classes], teacher_output) * dist_lambda
+            dist_loss.backward()
+            optimizer.step()
+
+
+
 
 
         student.eval()
@@ -96,13 +110,14 @@ def main():
     new_model = copy.deepcopy(old_model)
     new_model.classifier.add_task(output_classes=2)
 
-    dataset_train = GloveDataset("/home/feld/ros2_ws/datasets/dataset_merged3/train", ["rest", "bottle", "pen", "phone", "mouse", "glasses"])
+    dataset_train = GloveDataset("/home/feld/ros2_ws/datasets/dataset_merged3/train", ["mouse", "glasses"])
+    dataset_train_replay = GloveDataset("/home/feld/ros2_ws/datasets/dataset_merged3/train", ["rest", "bottle", "pen", "phone"])
     dataset_val = GloveDataset("/home/feld/ros2_ws/datasets/dataset_merged3/validation", ["rest", "bottle", "pen", "phone", "mouse", "glasses"])
 
     # new_model.set_warmup_mode(True)  # Set the model to warmup mode
     # lwf_train( new_model, dataset_train, dataset_val, warm_up=True)
 
     # new_model.set_warmup_mode(False)  # Set the model to normal mode
-    r_train( new_model, dataset_train, dataset_val)
+    lwf_train(old_model, new_model, dataset_train, dataset_train_replay, dataset_val)
 if __name__ == "__main__":
     main()

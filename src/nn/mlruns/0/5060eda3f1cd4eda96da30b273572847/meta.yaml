@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/5060eda3f1cd4eda96da30b273572847/artifacts
+deleted_time: 1752420082313
 end_time: 1751537030914
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 5060eda3f1cd4eda96da30b273572847
 run_name: worried-horse-649
 source_name: ''
