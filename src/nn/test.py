@@ -10,8 +10,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-labels = ["rest", "bottle", "pen", "phone"]
-# labels = ["rest", "bottle", "pen", "phone", "mouse", "glasses"]
+# labels = ["rest", "bottle", "pen", "phone"]
+labels = ["rest", "bottle", "pen", "phone", "mouse", "glasses"]
 
 confusion_matrix = torch.zeros(len(labels), len(labels))  # Assuming 4 classes
 
@@ -24,7 +24,7 @@ def test(directory = 'dataset', checkpoint_path="checkpoint.pt", dir = "test"):
     if os.path.exists(checkpoint_path):
         print("Loading model from checkpoint...")
         net = Network(output_classes=4)
-        # net.classifier.add_task(output_classes=2) 
+        net.classifier.add_task(output_classes=2) 
         net.load_state_dict(torch.load(checkpoint_path))
     else:
         print("No checkpoint found, initializing new model...")

@@ -14,7 +14,7 @@ class RealTimeClassifier(Node):
         
         self.window = torch.zeros((100, 31), dtype=torch.float32)
         
-        self.net = Network()  
+        self.net = Network()
         self.net.load_state_dict(torch.load('/home/feld/ros2_ws/src/nn/checkpoint.pt'))
         
         self.subscription = self.create_subscription(

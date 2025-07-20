@@ -13,6 +13,7 @@ At the core of the system is an **A-CBLN** model:
 > **A**ttention-based **C**onvolutional **B**idirectional **L**STM **N**etwork  
 Inspired by the [PLOS ONE paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0294174).
 
+
 ---
 
 ## 📂 Repository Structure
@@ -89,6 +90,9 @@ Continual learning strategies like:
 - lwf.py for Learning Without Forgetting
 
 - der.py for Dark Experience Replay
+
+> **L**earning **W**hithout **F**orgetting: see paper [ArXive](https://arxiv.org/abs/1606.09282)\
+**D**ark **E**xperience **R**eplay: see [ArXive](https://arxiv.org/abs/2004.07211)
 
 ---
 ## 🎓 Why This Project Matters
