@@ -48,7 +48,7 @@ ros2_ws/\
 
 Make sure you have sourced your ROS 2 environment (and Python virtual environment, if used).
 
-### 🔧 Build the ROS 2 Packages
+### Build the ROS 2 Packages
 
 ```bash
 colcon build --packages-select dataglove dataglove_msg
@@ -56,7 +56,7 @@ source install/setup.bash
 ```
 
 
-### 🚀 Run the System
+### Run the System
 
 Start the glove data publisher:
 ```bash
