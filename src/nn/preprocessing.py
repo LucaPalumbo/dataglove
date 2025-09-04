@@ -197,7 +197,7 @@ if __name__ == "__main__":
         # remove_brackets_from_files(dir)
         # remove_empty_column(dir)
 
-    directory = '/home/feld/ros2_ws/datasets/dataset_merged2'
+    directory = '/home/feld/ros2_ws/datasets/dataset_split'
     if args.split:
         train_val_test_split(directory = directory)
 

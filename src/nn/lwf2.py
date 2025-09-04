@@ -16,7 +16,7 @@ def distillation_loss(student_output, teacher_output, temperature=2.0):
     return F.kl_div(student_probs.log(), teacher_probs, reduction='batchmean') * (temperature * temperature)
 
 
-def lwf_train(teacher, student, dataset_train, dataset_val, lambda_distill = 1, warm_up=False): 
+def lwf_train(teacher, student, dataset_train, dataset_val, lambda_distill = 4.5, warm_up=False): 
     old_classes = 4
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -30,8 +30,8 @@ def lwf_train(teacher, student, dataset_train, dataset_val, lambda_distill = 1, 
         "momentum": 0.4,  # Momentum
     }
 
-    # optimizer = torch.optim.Adam(student.parameters(), lr=1e-4) # lr 10 time smaller than in train.py
-    optimizer = torch.optim.SGD(student.parameters(), **optimizer_params)  # Using SGD with momentum and weight decay
+    optimizer = torch.optim.Adam(student.parameters(), lr=1e-3) # lr 10 time smaller than in train.py
+    # optimizer = torch.optim.SGD(student.parameters(), **optimizer_params)  # Using SGD with momentum and weight decay
     dataloader_train = DataLoader(dataset_train, shuffle=True, batch_size=5)
     dataloader_val = DataLoader(dataset_val, shuffle=True, batch_size=5)
     early_stopping = EarlyStopping(patience=50, delta=0.0006, verbose=True)
@@ -49,10 +49,13 @@ def lwf_train(teacher, student, dataset_train, dataset_val, lambda_distill = 1, 
 
             # Forward pass through the student model
             student_output = student(batch)
+        
 
             # Forward pass through the teacher model
             with torch.no_grad():
                 teacher_output = teacher(batch)
+
+         
 
             # Compute the distillation loss
             dist_loss = distillation_loss(student_output[:,:old_classes], teacher_output)
@@ -78,13 +81,14 @@ def lwf_train(teacher, student, dataset_train, dataset_val, lambda_distill = 1, 
             total_val = 0
             for batch, labels_id in progress_bar:
                 batch = batch.to(device)
-                labels_id = labels_id.to(device) # + old_classes  ##
+                labels_id = labels_id.to(device) + old_classes  ##
 
                 student_output = student(batch)
                 teacher_output = teacher(batch)
+     
 
                 # print(f"Student output shape: {student_output.shape}, Teacher output shape: {labels_id}")
-                val_loss = loss_function(student_output, labels_id) #+ lambda_distill * distillation_loss(student_output[:,:old_classes], teacher_output)
+                val_loss = loss_function(student_output, labels_id) + lambda_distill * distillation_loss(student_output[:,:old_classes], teacher_output)
                 total_val_loss += val_loss.item()
 
                 _, predicted = torch.max(student_output, 1)
@@ -114,8 +118,8 @@ def main():
     new_model = copy.deepcopy(old_model)
     new_model.classifier.add_task(output_classes=2)
 
-    dataset_train = GloveDataset("/home/feld/ros2_ws/datasets/dataset_merged2/train", ["mouse", "glasses"])
-    dataset_val = GloveDataset("/home/feld/ros2_ws/datasets/dataset_merged2/validation", ["rest", "bottle", "pen", "phone", "mouse", "glasses"])
+    dataset_train = GloveDataset("/home/feld/ros2_ws/datasets/dataset_split_cl/train", ["mouse", "glasses"])
+    dataset_val = GloveDataset("/home/feld/ros2_ws/datasets/dataset_split_cl/validation", ["mouse", "glasses"])
 
     new_model.set_warmup_mode(True)  
     lwf_train(old_model, new_model, dataset_train, dataset_val, warm_up=True)

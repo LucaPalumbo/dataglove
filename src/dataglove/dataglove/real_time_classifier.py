@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 import torch
 from .network import Network
+import os
 
 from dataglove_msgs.msg import VMG30Data
 
@@ -11,15 +12,26 @@ class RealTimeClassifier(Node):
         super().__init__('real_time_classifier')
         self.get_logger().info('Real Time Classifier Node has been started.')
         self.get_logger().info(f'{torch.__version__}')
+
+        self.declare_parameter('continual', False)
+        continual = self.get_parameter('continual').value
+        path = "/home/feld/ros2_ws/src/nn/"
+
+        self.window = torch.zeros((200, 31), dtype=torch.float32)
         
-        self.window = torch.zeros((100, 31), dtype=torch.float32)
-        
-        self.net = Network()
-        self.net.load_state_dict(torch.load('/home/feld/ros2_ws/src/nn/checkpoint.pt'))
+        self.net = Network(output_classes=6)
+        if continual:
+            self.get_logger().info('Loading model with 6 classes.')
+            self.net.classifier.add_task(output_classes=2)  # Assuming 2 classes of continual learning
+            path = os.path.join(path, 'distillated_checkpoint.pt')
+        else:
+            path = os.path.join(path, 'checkpoint.pt')
+        self.net.load_state_dict(torch.load(path))
+
         
         self.subscription = self.create_subscription(
-            VMG30Data,  # Replace with the actual message type you expect
-            '/sensor',  # Replace with the actual topic name
+            VMG30Data,  
+            '/sensor', 
             self.classify_data,
             10)
         
@@ -43,12 +55,10 @@ class RealTimeClassifier(Node):
     def inference(self):
         labels = ["rest", "bottle", "pen", "phone", "mouse", "glasses"]
         window_tensor = self.window.unsqueeze(0).unsqueeze(0)
-        # print(f'Window tensor shape: {window_tensor.shape}')
         self.net.eval()  
         with torch.no_grad():
             output = self.net(window_tensor)
-            # self.get_logger().info(f'output: {output}')
-            # Assuming the output is a tensor of class probabilities
+            # Output is a tensor of class probabilities
             predicted_class = torch.argmax(output, dim=1).item()
             self.get_logger().info(f'Predicted class: {predicted_class}: {labels[predicted_class]}')
 
@@ -57,14 +67,14 @@ class RealTimeClassifier(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    data_saver = RealTimeClassifier()
+    rt_classifier = RealTimeClassifier()
 
-    rclpy.spin(data_saver)
+    rclpy.spin(rt_classifier)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    data_saver.destroy_node()
+    rt_classifier.destroy_node()
     rclpy.shutdown()
 
 

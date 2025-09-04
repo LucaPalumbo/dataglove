@@ -32,7 +32,7 @@ class Attention(nn.Module):
 
     def forward(self, lstm_output):
         # lstm_output: (batch, seq_len, hidden_dim)
-        scores = self.attn(lstm_output)              # (batch, seq_len, 1)
+        scores = torch.tanh(self.attn(lstm_output))  # (batch, seq_len, 1)
         weights = self.softmax(scores)               # (batch, seq_len, 1)
         context = torch.sum(weights * lstm_output, dim=1)  # (batch, hidden_dim)
         return context, weights

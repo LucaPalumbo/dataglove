@@ -92,9 +92,9 @@ def train(directory='./dataset', labels=["rest", "bottle", "pen", "phone"]):
         
 
 def main():
-    lables = ["rest", "bottle", "pen", "phone"]
-    directory = '/home/feld/ros2_ws/datasets/dataset_merged2'
-    train(directory, lables)
+    labels = ["rest", "bottle", "pen", "phone"] #, "mouse", "glasses"]
+    directory = '/home/feld/ros2_ws/datasets/dataset_split'
+    train(directory, labels)
 
 
 

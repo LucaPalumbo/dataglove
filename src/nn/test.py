@@ -10,21 +10,15 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-# labels = ["rest", "bottle", "pen", "phone"]
-labels = ["rest", "bottle", "pen", "phone", "mouse", "glasses"]
 
-confusion_matrix = torch.zeros(len(labels), len(labels))  # Assuming 4 classes
-
-
-def test(directory = 'dataset', checkpoint_path="checkpoint.pt", dir = "test"):
-
-
+def test(directory = 'dataset', checkpoint_path="checkpoint.pt", dir = "test", num_classes=4, labels=None, confusion_matrix=None):
 
     # initiialize model from checkpoint if exists
     if os.path.exists(checkpoint_path):
         print("Loading model from checkpoint...")
         net = Network(output_classes=4)
-        net.classifier.add_task(output_classes=2) 
+        if num_classes == 6:
+            net.classifier.add_task(output_classes=2) 
         net.load_state_dict(torch.load(checkpoint_path))
     else:
         print("No checkpoint found, initializing new model...")
@@ -61,7 +55,7 @@ def test(directory = 'dataset', checkpoint_path="checkpoint.pt", dir = "test"):
 
     print("Confusion Matrix:\n" , confusion_matrix)
 
-def plot_confusion_matrix():
+def plot_confusion_matrix(confusion_matrix, labels):
 
     plt.figure(figsize=(10, 8))
     sns.heatmap(confusion_matrix.numpy(), annot=True, fmt='g', cmap='Blues',
@@ -113,15 +107,25 @@ def main():
     parser.add_argument('--checkpoint', type=str, default="checkpoint.pt", help='Path to the model checkpoint')
     parser.add_argument('--validation', action='store_true', help='Run validation instead of test')
     parser.add_argument('--plot', action='store_true', help='Plot confusion matrix')
+    parser.add_argument('--s', action='store_true', help='Use 6 classes instead of 4')
+
     args = parser.parse_args()
 
 
-    directory = '/home/feld/ros2_ws/datasets/dataset_merged2'  # Change this to your dataset directory
-    test(directory, args.checkpoint, "validation" if args.validation else "test")
+    if args.s:
+        labels = ["rest", "bottle", "pen", "phone", "mouse", "glasses"]
+    else:
+        labels = ["rest", "bottle", "pen", "phone"]
+
+    confusion_matrix = torch.zeros(len(labels), len(labels))  # Assuming 4 classes
+
+
+    directory = '/home/feld/ros2_ws/datasets/dataset_split'  # Change this to your dataset directory
+    test(directory, args.checkpoint, "validation" if args.validation else "test", num_classes=6 if args.s else 4, labels=labels, confusion_matrix=confusion_matrix)
 
     if args.plot:
         print("Plotting confusion matrix...")
-        plot_confusion_matrix()
+        plot_confusion_matrix(confusion_matrix=confusion_matrix, labels=labels)
 
 
 if __name__ == "__main__":
