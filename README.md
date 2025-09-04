@@ -3,11 +3,11 @@
 This project enables **real-time object recognition** using the **VMG30 sensorized glove** by [Virtual Realities](https://www.vrealities.com/products/data-gloves/vmg30).  
 Sensor data from the glove is processed using a deep learning model that classifies hand gestures and object interactions in real time.
 
-> 🧪 This repository has also been a playground for experimenting with **continual learning** techniques, allowing the model to **incrementally learn new object classes** without forgetting previously learned ones.
+> This repository has also been a playground for experimenting with **continual learning** techniques, allowing the model to **incrementally learn new object classes** without forgetting previously learned ones.
 
 ---
 
-## 🧠 Neural Network Model: A-CBLN
+## Neural Network Model: A-CBLN
 
 At the core of the system is an **A-CBLN** model:  
 > **A**ttention-based **C**onvolutional **B**idirectional **L**STM **N**etwork  
@@ -16,7 +16,7 @@ Inspired by the [PLOS ONE paper](https://journals.plos.org/plosone/article?id=10
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 ros2_ws/\
 ├── src/ \
 │ ├── dataglove/ # ROS 2 nodes: data acquisition + real-timeclassification \
@@ -44,7 +44,7 @@ ros2_ws/\
 
 ---
 
-## 🛠️ Build & Run Instructions
+## Build & Run Instructions
 
 Make sure you have sourced your ROS 2 environment (and Python virtual environment, if used).
 
@@ -69,7 +69,7 @@ ros2 run dataglove real_time_classifier
 ```
 
 ---
-## 🏋️‍♂️ Training & Continual Learning
+## Training & Continual Learning
 
 To train a new model on recorded glove data:
 ```bash
@@ -96,7 +96,7 @@ Continual learning strategies like:
 
 <!--
 ---
-## 🎓 Why This Project Matters
+## Why This Project Matters
  
 This project combines ROS 2, real-time systems, and deep learning to build an interactive gesture-based recognition system.
 It also serves as a hands-on platform for experimenting with continual learning — a key challenge in making AI systems that learn over time without forgetting what they've already mastered.
