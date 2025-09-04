@@ -94,9 +94,10 @@ Continual learning strategies like:
 > **L**earning **W**hithout **F**orgetting: see paper [ArXive](https://arxiv.org/abs/1606.09282)\
 **D**ark **E**xperience **R**eplay: see [ArXive](https://arxiv.org/abs/2004.07211)
 
+<!--
 ---
 ## 🎓 Why This Project Matters
-
+ 
 This project combines ROS 2, real-time systems, and deep learning to build an interactive gesture-based recognition system.
-
 It also serves as a hands-on platform for experimenting with continual learning — a key challenge in making AI systems that learn over time without forgetting what they've already mastered.
+-->
